@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.amruthasingh.starbucks_transformers.MainActivity">
+
+
+    <EditText
+        android:id="@+id/firstnamebox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bregister"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/bregister"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/lastnamebox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/firstnamebox"
+        android:layout_alignStart="@+id/firstnamebox"
+        android:layout_below="@+id/firstnametext"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/phonenumberbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lastnamebox"
+        android:layout_alignStart="@+id/lastnamebox"
+        android:layout_below="@+id/lastnamebox"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/citybox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/phonenumberbox"
+        android:layout_alignStart="@+id/phonenumberbox"
+        android:layout_below="@+id/phonenumbertext"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/emailbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/citybox"
+        android:layout_alignStart="@+id/citybox"
+        android:layout_below="@+id/citybox"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Email ID"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/passwordbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/emailbox"
+        android:layout_alignStart="@+id/emailbox"
+        android:layout_below="@+id/Emailtext"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:password="true" />
+
+
+    <TextView
+        android:id="@+id/firstnametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/firstnamebox"
+        android:layout_alignBottom="@+id/firstnamebox"
+        android:layout_alignLeft="@+id/lastnametext"
+        android:layout_alignStart="@+id/lastnametext"
+        android:text="First Name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lastnametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lastnamebox"
+        android:layout_alignBottom="@+id/lastnamebox"
+        android:layout_alignLeft="@+id/phonenumbertext"
+        android:layout_alignStart="@+id/phonenumbertext"
+        android:text="Last Name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/phonenumbertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/phonenumberbox"
+        android:layout_alignBottom="@+id/phonenumberbox"
+        android:layout_alignLeft="@+id/passwordtext"
+        android:layout_alignStart="@+id/passwordtext"
+        android:text="Phone Number"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/citytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/citybox"
+        android:layout_alignBottom="@+id/citybox"
+        android:layout_alignEnd="@+id/Emailtext"
+        android:layout_alignRight="@+id/Emailtext"
+        android:text="City"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Emailtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/emailbox"
+        android:layout_alignBottom="@+id/emailbox"
+        android:layout_alignEnd="@+id/passwordtext"
+        android:layout_alignRight="@+id/passwordtext"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:text="Email:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/passwordtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/passwordbox"
+        android:layout_alignBottom="@+id/passwordbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Password:"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/bregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:background="@color/black"
+        android:text="Register"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

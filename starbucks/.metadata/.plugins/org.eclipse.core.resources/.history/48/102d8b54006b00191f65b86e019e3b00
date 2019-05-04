@@ -1,0 +1,19 @@
+
+package starbucks;
+
+/**
+ * Add New Card Screen
+ */
+public class MyNewCardScreen extends Screen
+{
+    public MyNewCardScreen()
+    {
+    	
+    }
+    
+    /** Dummy Message*/
+    public void message()
+    {
+    	System.out.println("Inside Pinscreen");
+    }
+}

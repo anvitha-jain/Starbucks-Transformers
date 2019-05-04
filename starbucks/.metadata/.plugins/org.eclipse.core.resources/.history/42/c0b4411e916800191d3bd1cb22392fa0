@@ -1,0 +1,71 @@
+
+
+package starbucks ;
+
+public class MyStarbucksCard
+{
+	private static MyStarbucksCard single_instance = null;
+	
+	String sCardNumber;
+	String sCardCode;
+	double balance;
+	
+	private MyStarbucksCard()
+	{
+		sCardNumber = "000000000";
+		sCardCode = "000";
+		balance = 0.00;		
+	}
+	
+	/** 
+	 * Getting the Instance of card
+	 * @return single_instance
+	 */
+	public static MyStarbucksCard getInstance()
+	{
+		if(single_instance == null)
+		{
+			single_instance = new MyStarbucksCard();
+		}
+		
+		return single_instance;
+	}
+	
+	/**
+	 * Initializing the sCardNumber,sCardCode and balance
+	 * @param sNumber
+	 * @param sCode
+	 */
+	public void addNewCard(String sNumber, String sCode)
+	{
+		this.sCardNumber = sNumber;
+		this.sCardCode = sCode;
+		this.balance = 20.0;
+	}
+	
+	public String getCardNumber()
+	{
+		return sCardNumber;
+	}
+	
+	public double getBalance()
+	{
+		return balance;
+	}
+	
+	/** Calculates for the current balance*/
+	public void addCharge()
+	{
+		if(balance >= 1.50)
+		{
+			balance = balance - 1.50;
+		}
+	}
+	
+	public void resetCard()
+	{
+		sCardNumber = "000000000";
+		sCardCode = "000";
+		balance = 0.00;	
+	}
+}

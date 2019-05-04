@@ -1,0 +1,18 @@
+
+
+package starbucks ;
+
+/** Pin Screen */
+public class PinScreen extends Screen
+{
+   
+    public PinScreen()
+    {
+    }
+  
+    /** Dummy Message*/
+    public void Message()
+    {
+    	System.out.println("Inside Pinscreen");
+    }
+}

@@ -1,0 +1,47 @@
+
+
+package starbucks;
+
+/** My Card Options Screen */
+public class MyCardsOptions extends Screen
+{
+   
+    public MyCardsOptions()
+    {
+       
+    }
+
+    
+    /**
+     * Get Display Contents
+     * @return Display Contents
+     */
+    public String display()
+    {
+    	String msg = "Reload\n" +
+    				 "Refresh\n" +
+    				 "More Options\n"+
+    				 "Cancel";
+    	return msg;
+    }
+    
+    
+    /**
+     * Send Touch Events to the Chain
+     * @param x Touch X Coord.
+     * @param y Touch Y Coord.
+     */
+    public void touch(int x, int y)
+    {    
+    	
+    	if((x ==1  && y == 7) || ((x ==2  && y == 7) || ((x ==3  && y == 7) ))
+    	{
+    		MyCardsMoreOptions myCardsMoreOtions = new MyCardsMoreOptions();
+    		getFrame().setCurrentScreen( myCardsMoreOtions ) ;    	    	    
+    	}
+
+		 
+    }
+ 
+
+}

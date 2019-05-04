@@ -1,0 +1,79 @@
+package springbootfinalproject.model;
+
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name="users")
+@EntityListeners(AuditingEntityListener.class)
+public class User {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+	
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	@NotBlank
+	private String fname;
+	
+	@NotBlank
+	private String lname;
+	
+	@NotBlank
+	private String email;
+	
+	@NotBlank
+	private String password;
+	
+	@NotBlank
+	private String city;
+	
+	
+
+}

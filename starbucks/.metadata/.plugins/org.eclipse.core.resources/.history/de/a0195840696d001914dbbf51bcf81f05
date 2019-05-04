@@ -1,0 +1,5 @@
+package springbootfinalproject.model;
+
+public class User {
+
+}

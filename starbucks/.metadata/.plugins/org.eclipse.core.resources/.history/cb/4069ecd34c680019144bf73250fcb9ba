@@ -1,0 +1,746 @@
+package starbucks;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class SumanthBonusTest
+{
+
+    IApp app ;
+
+    public SumanthBonusTest()
+    {
+    }
+
+    @Before
+    public void setUp()
+    {
+        app = new AppAuthProxy() ;  
+    }
+
+    //Test cases to validate if the card id is less than 9
+    @Test
+    public void AddCardTest1()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits - entered only 8
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(2,3); // focus on card code
+        // Card Code digits
+        app.touch(1,7); // 7
+        app.touch(2,6); // 5
+        app.touch(3,5); // 3
+        // check digit entry
+        app.next() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[]", lines[4].trim());
+        assertEquals("[]", lines[5].trim());
+    }
+    
+    //Test cases to validate if the card code is less than 3
+    @Test
+    public void AddCardTest2()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        app.touch(2,3); // focus on card code
+        // Card Code digits - entered only 2
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        // check digit entry
+        app.next() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[]", lines[4].trim());
+        assertEquals("[]", lines[5].trim());
+    }
+    
+    //Test cases to validate if the card number is less than 9 and card code less than 3
+    @Test
+    public void AddCardTest3()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits - entered only 8
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(2,3); // focus on card code
+        // Card Code digits - entered only 2
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        // check digit entry
+        app.next() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[]", lines[4].trim());
+        assertEquals("[]", lines[5].trim());
+    }
+    
+    //Test cases to validate if the card number exceeds limit of 9
+    @Test
+    public void AddCardTest4()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits - entered 10
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        app.touch(2,8); // 0 - limit exceeded
+        app.touch(2,3); // focus on card code
+        // Card Code digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[123]", lines[5].trim());
+    }
+    
+    //Test cases to validate if the card code exceeds limit of 3
+    @Test
+    public void AddCardTest5()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        app.touch(2,3); // focus on card code
+        // Card Code digits - entered 4
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(2,8); // 0 - limit exceeded
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[123]", lines[5].trim());
+    }
+    
+    //Test case to validate change of focus in between adding numbers to card id and card code - focus(1,2)
+    @Test
+    public void AddCardTest6()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(2,3); // focus on card code
+        // Card Code digits
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,2); // focus back to card ID
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[123]", lines[5].trim());
+    }
+    
+    //Test case to validate change of focus in between adding numbers to card id and card code - focus(2,2)
+    @Test
+    public void AddCardTest7()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(2,3); // focus on card code
+        // Card Code digits
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(2,2); // focus back to card ID
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[123]", lines[5].trim());
+    }
+    
+    //Test case to validate change of focus in between adding numbers to card id and card code - focus(3,2)
+    @Test
+    public void AddCardTest8()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(2,3); // focus on card code
+        // Card Code digits
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(3,2); // focus back to card ID
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[123]", lines[5].trim());
+    }
+    
+    //Test Case to validate if we touch any other co-ordinates other than keypad
+    @Test
+    public void AddCardTest9()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits - Invalid co-ordinates
+        app.touch(1,4); 
+        app.touch(2,4); 
+        app.touch(3,4); 
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[]", lines[4].trim());
+        assertEquals("[]", lines[5].trim());
+    }
+    
+    //Test case to remove the previous entered key for the Card ID number and Card Code
+    @Test
+    public void AddCardTest10()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        app.touch(3,8); // remove the last digit entered
+        app.touch(2,3); // focus on card code
+        // Card Code digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(3,8); // remove the last digit entered
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[12345678]", lines[4].trim());
+        assertEquals("[12]", lines[5].trim());
+    }
+    
+    //Test to validate backspace without entering any details for card id - nothing should happen
+    @Test
+    public void AddCardTest11()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(3,8); // remove the last digit entered
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[]", lines[4].trim());
+        assertEquals("[]", lines[5].trim());
+    }
+    
+    //Test to validate backspace without entering any details for card code - nothing should happen
+    @Test
+    public void AddCardTest12()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        app.touch(2,3); // focus on card code
+        // Card Code digits 
+        app.touch(3,8); // backspace
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[]", lines[5].trim());
+    }
+    
+    //Test Case to validate prev()/cancel flow on Add Cards - It should navigate to Settings screen
+    @Test
+    public void AddCardTest13()
+    {
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        app.touch(2,3); // focus on card code
+        // Card Code digits 
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        // check digit entry
+        app.prev() ;
+        assertEquals("Settings", app.screen());
+    }
+    
+    //Test case to validate the Add card screen after card successfully added and return back - it should be empty to add new card
+    @Test
+    public void AddCardTest14()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits
+        app.touch(1,5); // 1
+        app.touch(2,5); // 2
+        app.touch(3,5); // 3
+        app.touch(1,6); // 4
+        app.touch(2,6); // 5
+        app.touch(3,6); // 6
+        app.touch(1,7); // 7
+        app.touch(2,7); // 8
+        app.touch(3,7); // 9
+        app.touch(2,3); // focus on card code
+        // Card Code digits
+        app.touch(3,7); // 9
+        app.touch(3,7); // 9
+        app.touch(3,7); // 9
+        // check digit entry
+        app.display() ;
+        lines = app.screenContents().split("\n"); 
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[999]", lines[5].trim());
+        // add card - see balance
+        app.next() ;    
+        app.display() ;
+        assertEquals("MyCards", app.screen());
+        lines = app.screenContents().split("\n");  
+        assertEquals("$20.00", lines[7]); 
+        //navigate to settings screen
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("[]", lines[4].trim());
+        assertEquals("[]", lines[5].trim());
+    }
+    
+  //Test Case - Invalid pin screen validation
+    @Test
+    public void PasscodeTest1()
+    {
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,5) ;
+        assertEquals("PinScreen", app.screen());
+    }  
+    
+    //Test Case - Error Message "Invalid Pin" validation
+    @Test
+    public void PasscodeTest2()
+    {
+    	String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,5) ;
+        assertEquals("PinScreen", app.screen());
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("Invalid Pin", lines[3].trim());
+        assertEquals("[_][_][_][_]", lines[5].trim());
+    }
+    
+    //Test Case - After Invalid pin enter valid pin details it should navigate to my cards
+    @Test
+    public void PasscodeTest3()
+    {
+    	String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,5) ;
+        assertEquals("PinScreen", app.screen());
+        app.display() ;
+        lines = app.screenContents().split("\n");  
+        assertEquals("Invalid Pin", lines[3].trim());
+        assertEquals("[_][_][_][_]", lines[5].trim());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        assertEquals("MyCards", app.screen());
+    }
+    
+    //Test Case - Navigation from Menu B(Payments) to Menu A(My Cards)
+    @Test
+    public void MenuTestTest1()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;  // 1
+        app.touch(2,5) ;  // 2
+        app.touch(3,5) ;  // 3
+        app.touch(1,6) ;  // 4
+        assertEquals("MyCards", app.screen());
+        lines = app.screenContents().split("\n"); 
+        assertEquals("$0.00", lines[7].trim());
+        app.display() ;
+        app.execute("B") ;
+        assertEquals("Payments", app.screen());
+        lines = app.screenContents().split("\n"); 
+        assertEquals("Find Store", lines[7].trim());  
+        assertEquals("Enable Payments", lines[8].trim());  
+        app.display() ;
+        app.execute("A") ;
+        assertEquals("MyCards", app.screen());
+        lines = app.screenContents().split("\n"); 
+        assertEquals("$0.00", lines[7].trim());
+    }
+    
+    //Test Case - Navigation from My Cards to Menu D(Store)
+    @Test
+    public void MenuTestTest2()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;  // 1
+        app.touch(2,5) ;  // 2
+        app.touch(3,5) ;  // 3
+        app.touch(1,6) ;  // 4
+        assertEquals("MyCards", app.screen());
+        lines = app.screenContents().split("\n"); 
+        assertEquals("$0.00", lines[7].trim());
+        app.display() ;
+        app.execute("D") ;
+        assertEquals("Store", app.screen());
+        app.display() ;
+    }
+    
+    //Test Case - Navigation from My Cards to Settings(E)
+    @Test
+    public void MenuTestTest3()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;  // 1
+        app.touch(2,5) ;  // 2
+        app.touch(3,5) ;  // 3
+        app.touch(1,6) ;  // 4
+        assertEquals("MyCards", app.screen());
+        lines = app.screenContents().split("\n"); 
+        assertEquals("$0.00", lines[7].trim());
+        app.display() ;
+        app.execute("E") ;
+        assertEquals("Settings", app.screen());
+        lines = app.screenContents().split("\n"); 
+        assertEquals("Add Card", lines[4].trim());
+        assertEquals("Delete Card", lines[5].trim());
+        assertEquals("Billing", lines[6].trim());
+        assertEquals("Passcode", lines[7].trim());
+        assertEquals("About|Terms", lines[9].trim());
+        assertEquals("Help", lines[10].trim());
+        app.display() ;
+    }
+
+    //Test Case - Validation of the payment amount less than $0.50 (co-ordinatres touch(2,2))
+    @Test
+    public void PaymentsTest1()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits
+        app.touch(1,5); 
+        app.touch(2,5);
+        app.touch(3,5);
+        app.touch(1,6);
+        app.touch(2,6);
+        app.touch(3,6);
+        app.touch(1,7);
+        app.touch(2,7);
+        app.touch(3,7);
+        app.touch(2,3); // focus on card code
+        // Card Code digits
+        app.touch(3,7);
+        app.touch(3,7);
+        app.touch(3,7);
+        // check digit entry
+        lines = app.screenContents().split("\n"); 
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[999]", lines[5].trim());
+        // add card - see balance
+        app.next() ;    
+        assertEquals("MyCards", app.screen());
+        lines = app.screenContents().split("\n");  
+        assertEquals("$20.00", lines[7].trim());    
+        // switch to payment
+        app.touch(3,3); 
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[6].trim());
+        assertEquals("Scan Now", lines[9].trim());  
+        // Make Payments 21 - but should not deduct beyond $0.50
+        for(int i=0; i < 14; i++){
+        	app.touch(2,2);  // Pay $1.50
+        }
+        app.touch(3,3); // switch to balance
+        lines = app.screenContents().split("\n");  
+        assertEquals("$0.50", lines[7].trim());         
+    }
+    
+  //Test Case - Validation of the payment amount less than $0.50 (co-ordinatres touch(3,2))
+    @Test
+    public void PaymentsTest2()
+    {
+        String[] lines ;
+        assertEquals("PinScreen", app.screen());
+        app.touch(1,5) ;
+        app.touch(2,5) ;
+        app.touch(3,5) ;
+        app.touch(1,6) ;
+        app.execute("E") ; // Settings Page
+        assertEquals("Settings", app.screen());
+        app.touch(1,1) ; // Add New Card
+        assertEquals("AddCard", app.screen());
+        // Card Id digits
+        app.touch(1,5); 
+        app.touch(2,5);
+        app.touch(3,5);
+        app.touch(1,6);
+        app.touch(2,6);
+        app.touch(3,6);
+        app.touch(1,7);
+        app.touch(2,7);
+        app.touch(3,7);
+        app.touch(2,3); // focus on card code
+        // Card Code digits
+        app.touch(3,7);
+        app.touch(3,7);
+        app.touch(3,7);
+        // check digit entry
+        lines = app.screenContents().split("\n"); 
+        assertEquals("[123456789]", lines[4].trim());
+        assertEquals("[999]", lines[5].trim());
+        // add card - see balance
+        app.next() ;    
+        assertEquals("MyCards", app.screen());
+        lines = app.screenContents().split("\n");  
+        assertEquals("$20.00", lines[7].trim());    
+        // switch to payment
+        app.touch(3,3); 
+        lines = app.screenContents().split("\n");  
+        assertEquals("[123456789]", lines[6].trim());
+        assertEquals("Scan Now", lines[9].trim());  
+        // Make Payments 21 - but should not deduct beyond $0.50
+        for(int i=0; i < 14; i++){
+        	app.touch(3,2);  // Pay $1.50
+        }
+        app.touch(3,3); // switch to balance
+        lines = app.screenContents().split("\n");  
+        assertEquals("$0.50", lines[7].trim());         
+    }
+    
+    @After
+    public void tearDown()
+    {
+    }
+}

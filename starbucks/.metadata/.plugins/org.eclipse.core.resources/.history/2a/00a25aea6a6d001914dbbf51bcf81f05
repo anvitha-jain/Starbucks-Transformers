@@ -1,5 +1,0 @@
-package springbootfinalproject.repository;
-
-public class UserRepository {
-
-}

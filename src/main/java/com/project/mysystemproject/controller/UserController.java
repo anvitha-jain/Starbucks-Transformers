@@ -3,8 +3,6 @@ package com.project.mysystemproject.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.project.mysystemproject.exception.UserNotFoundException;
 import com.project.mysystemproject.model.User;
 import com.project.mysystemproject.repository.UserRepository;
 import javax.validation.Valid;

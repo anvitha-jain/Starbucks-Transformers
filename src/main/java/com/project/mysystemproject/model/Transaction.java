@@ -1,10 +1,12 @@
 package com.project.mysystemproject.model;
 
-import java.sql.Date;
 
 
+import java.time.LocalDateTime;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 
 @Entity
@@ -39,35 +41,29 @@ public class Transaction {
 		this.cardno = cardno;
 	}
 
-	public Long getTamount() {
+	public double getTamount() {
 		return tamount;
 	}
 
-	public void setTamount(Long tamount) {
+	public void setTamount(double tamount) {
 		this.tamount = tamount;
 	}
-
-	public Date getDatetime() {
+	
+	public LocalDateTime getDatetime() {
 		return datetime;
 	}
 
-	public void setDatetime(Date datetime) {
+	public void setDatetime(LocalDateTime datetime) {
 		this.datetime = datetime;
 	}
 
 	@NotBlank
 	private String username;
 	
-	
 	private Long cardno;
 	
+	private double tamount;
 	
-	private Long tamount;
-	
-	
-	private Date datetime;
-	
-	
-	
-
+	@CreationTimestamp
+	private LocalDateTime datetime;
 }

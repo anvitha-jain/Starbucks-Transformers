@@ -2,6 +2,8 @@ package com.project.mysystemproject.repository;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -20,8 +22,15 @@ public interface CardRepository extends JpaRepository<Card, Long> {
 	public List<Card> findBycardno(Long cardno);
 	
 	@Query("SELECT c.balance FROM Card c WHERE c.cardno = :cardno")
-	public int findbalanceBycardno(@Param("cardno") Long cardno);
+	public double findbalanceBycardno(@Param("cardno") Long cardno);
 	
-	//@Modifying
+	
+    
+    @Query(value = "UPDATE cards c set balance =:balance where c.cardno = :cardno",
+            nativeQuery = true)
+    @Modifying
+    @Transactional
+    void updateCardbalance(@Param("balance") double balance, @Param("cardno") Long cardno);
+
 	
 }

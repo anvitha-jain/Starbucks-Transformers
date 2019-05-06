@@ -62,12 +62,12 @@ public class Card {
 	}
 
 
-	public int getBalance() {
+	public double getBalance() {
 		return balance;
 	}
 
 
-	public void setBalance(int balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 
@@ -76,7 +76,7 @@ public class Card {
 		super();
 	}
 	
-	public Card(Long cardno, int cardexpiry, String cardholdername, int cvv, String username, int balance) {
+	public Card(Long cardno, int cardexpiry, String cardholdername, int cvv, String username, double balance) {
         super();
         this.cardno = cardno;
         this.cardexpiry = cardexpiry;
@@ -101,6 +101,6 @@ public class Card {
 	
 	
 	
-	private int balance;
+	private double balance;
 
 }

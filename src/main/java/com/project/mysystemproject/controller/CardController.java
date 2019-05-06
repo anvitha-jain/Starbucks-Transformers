@@ -2,11 +2,9 @@ package com.project.mysystemproject.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import com.project.mysystemproject.exception.CardNotFoundException;
 import com.project.mysystemproject.model.Card;
 import com.project.mysystemproject.repository.CardRepository;
-import com.project.mysystemproject.repository.UserRepository;
+
 
 import javax.validation.Valid;
 import java.util.List;

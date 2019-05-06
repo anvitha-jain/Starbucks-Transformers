@@ -15,7 +15,6 @@ public class CardController {
 	@Autowired
 	CardRepository cardRepository;
 	
-
 	@GetMapping("/cards")
 	@ResponseBody
 	public List<Card> getCards(@RequestParam(value = "username", required = false) String userName) 

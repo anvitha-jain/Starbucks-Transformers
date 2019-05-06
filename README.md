@@ -29,6 +29,30 @@ Final project for Starbucks by Team Transformers.
 
 [Story Board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
 
+**Team Member-Contributions**
+
+* Application Design and Setup Poorva Agarwal
+* Code Reviews Snehal Yeole
+* EC2, Auto Scale Group, ELB Deployment Amrutha Singh Anvitha Jain
+* Android Application Poorva Agarwal, Snehal Yeole
+* Authentication/Login API Anvitha Jain
+* Sign Up API Anvitha Jain
+* Manual Testing Login and Sign up APIs Anvitha Jain
+* Add Card API Amrutha Singh
+* Reload Card API Amrutha Singh(Need to be done)
+* Manual Testing AddCard and ReloadCard APIs Amrutha Singh
+* User Profile API Snehal Yeole
+* Get Card Details API Snehal Yeole
+* Manual Testing Card Flows Snehal Yeole
+* Make Payment and Update Card API Poorva Agarwal
+* Get Transaction Details of user API Poorva Agarwal
+* Get all Transactions API Poorva Agarwal
+* Manual Testing of Payment Flows Poorva Agarwal
+* RDS setup Snehal Yeole
+
+
+
+
 
 
 

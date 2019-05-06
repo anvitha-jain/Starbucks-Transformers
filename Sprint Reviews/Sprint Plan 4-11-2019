@@ -1,0 +1,12 @@
+1. App idea Brainstorming.
+2. Discuss use cases and updation of backlog items.
+3. Allocate tasks of API for person.
+4. Created Taskboard to maintain active sprint tasks.
+5. Discussed and finalize basic project design as below
+   - Use Android Application
+   - Set up Android project 
+   - Service(REST Interface), API(Business Logic and Service Interfaces)
+6. Android Project Setup
+7. EC2 deployment research.
+8. Cloud deployment
+9. Automating the cloud deployment

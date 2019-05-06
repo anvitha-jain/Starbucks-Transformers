@@ -1,11 +1,13 @@
 # Starbucks-Transformers
 
+Final project for Starbucks by Team Transformers.
+
+
 **Application Design:**
 * Used MVC design pattern to create API's
 * Used Java Spring Boot framework to generate WAR file of application
 
-Final project for Starbucks by Team Transformers.
-
+**Cloud Deployment**
 
 - Testing jenkins connectivity
 - Jenkins to EC2

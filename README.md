@@ -13,6 +13,7 @@ Final project for Starbucks by Team Transformers.
 * Implemented Autoscalling of the EC2 instance.
 
 **List of REST APIs**	
+---
   	
 * Sign up API
 * Authentication/Login API

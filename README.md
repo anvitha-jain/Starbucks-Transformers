@@ -33,7 +33,7 @@ Final project for Starbucks by Team Transformers.
 **Team Member-Contributions**
 
 * Application Design and Setup Poorva Agarwal
-* Code Reviews Snehal Yeole
+* Code Reviews Entire Team
 * EC2, Auto Scale Group, ELB Deployment Amrutha Singh Anvitha Jain
 * Android Application Poorva Agarwal, Snehal Yeole
 * Authentication/Login API Anvitha Jain

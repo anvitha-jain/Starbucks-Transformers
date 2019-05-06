@@ -7,6 +7,7 @@ Final project for Starbucks by Team Transformers.
 * Created Android Apllication for UI which is coming all API's
 
 **Cloud Deployment**
+---
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
 * Implemented Autoscalling of the EC2 instance.

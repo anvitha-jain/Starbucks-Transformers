@@ -1,4 +1,8 @@
 # Starbucks-Transformers
+
+Application Design:
+* Used MVC design
+
 Final project for Starbucks by Team Transformers.
 
 

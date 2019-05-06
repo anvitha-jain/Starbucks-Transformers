@@ -1,7 +1,8 @@
 # Starbucks-Transformers
 
 Application Design:
-* Used MVC design
+* Used MVC design pattern to create API's
+* Used Java Spring Boot framework to generate WAR file of application
 
 Final project for Starbucks by Team Transformers.
 

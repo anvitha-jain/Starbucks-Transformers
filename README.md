@@ -34,6 +34,7 @@ Final project for Starbucks by Team Transformers.
 [Story Board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
 
 **Team Member-Contributions**
+---
 
 * Application Design and Setup Poorva Agarwal
 * Code Reviews Entire Team

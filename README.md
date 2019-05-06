@@ -12,8 +12,8 @@ Final project for Starbucks by Team Transformers.
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
 * Implemented Autoscalling of the EC2 instance.
 
-testing automated deployment
-
+testing automated deployment - test 1
+ 
 **List of REST APIs**	
 ---
   	

@@ -4,7 +4,7 @@ Final project for Starbucks by Team Transformers.
 
 * Created Spring Boot Maven Project Application for building Rest API's using MySQL and JPA
 * Used MVC design pattern to create API's
-* Created Android Apllication for UI which is coming all API's
+* Created Android Aplication for UI which is displaying result for all API's
 
 **Cloud Deployment**
 ---

@@ -1,4 +1,4 @@
-#### Starbucks-Transformers
+###### Starbucks
 
 Final project for Starbucks by Team Transformers.
 

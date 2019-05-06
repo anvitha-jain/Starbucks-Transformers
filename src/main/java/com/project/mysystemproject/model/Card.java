@@ -100,7 +100,6 @@ public class Card {
 	private String username;
 	
 	
-	
 	private double balance;
 
 }

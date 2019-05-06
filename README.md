@@ -14,9 +14,10 @@ Final project for Starbucks by Team Transformers.
 **List of REST APIs**	
   	
 * Sign up API
-* Authentication API
-* Getting user profile.
+* Authentication/Login API
+* Getting user profile API
 * Add Card API
+* Reload Card Balance API
 * Get all cards for a user API
 * Payment API
 * Get all transactions for a user API

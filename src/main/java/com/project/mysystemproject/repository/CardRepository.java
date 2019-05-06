@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 
 import com.project.mysystemproject.model.Card;
 
-
 @Repository
 public interface CardRepository extends JpaRepository<Card, Long> {
 

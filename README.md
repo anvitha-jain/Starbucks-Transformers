@@ -1,17 +1,17 @@
-# Starbucks-Transformers
+#### Starbucks-Transformers
 
 Final project for Starbucks by Team Transformers.
 
-
 **Application Design:**
+
+* Created Spring Boot Maven Project Application for building Rest API's using MySQL and JPA
 * Used MVC design pattern to create API's
-* Used Java Spring Boot framework to generate WAR file of application
+* Created Android Apllication for UI which is coming all API's
 
 **Cloud Deployment**
 
-- Testing jenkins connectivity
-- Jenkins to EC2
-
+* Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
+* Implemented Autoscalling of the EC2 instance.
 
 **Draft Architecture:**
 
@@ -25,41 +25,30 @@ Final project for Starbucks by Team Transformers.
 [Story Board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
 
 
-
-
-
-
-
-
-
 ### Team Members - Contribution
 
-##### Project Setup]
+##### Project Setup
  	 Set up Android project for API, Service and Persistence JAR	- Amrutha & Anvitha
   	Amazon RDS Integration with the project setup	- Poorva & snehal
 	Overview of Android Studio, Spring and Amazon RDS	 - Poorva , snehal , Amrutha & Anvitha
 ##### REST API Implementation for Starbucks	
-  	Sign up API	- Anvitha
-	Login API	 -  Anvitha
-	Test Login and Sign Up API	 -  Anvitha
-	Add Card API - 	Poorva
-	Reload Card API	 - Poorva
-	Get Card/Balance API	 - Poorva
-	Test - Add Card Flow, Get Balance Flow, Reload Card Flow - 	Poorva
-	Create Orders API	 - Amrutha
-	Get Order Details API	 - Amrutha
-	Update Order Status API	 - Amrutha
-	Test Create Order and Update Status Flow	- Amrutha
-	Create Payment API	- Snehal
-	Calculate Payment -	Snehal
-	Update Payment and Order Details API	-  Snehal
-	Test Payment Flow	- Snehal
+  	
+	1. Sign up API
+	2. Authentication API
+	3. Getting user profile
+	4. Add Card API
+	5. Get all cards for a user API
+	6. Payment API
+	7. Get all transactions for a user API
+	
 ##### Extra-Credit  -  Project Deployment on Cloud Mobile Application UI
-  	Deploy on EC2, Set up AWS Infrastructure for Auto Scale Group, ELB	  -   Amrutha , Anvitha , Poorva & snehal
-	Development of Android Application UI	  -   Amrutha & Anvitha
+  	
+	Deploy on EC2, Set up AWS Infrastructure for Auto Scale Group, ELB   Amrutha , Anvitha , Poorva & Snehal
+	Development of Android Application UI	  -   Amrutha, Anvitha,Poorva and Snehal
 ##### Review	
- 	Architecture Diagram	 -  Poorva & snehal
-	Code Review	  -   Amrutha , Anvitha , Poorva & snehal
+ 	
+	Architecture Diagram	-  Poorva & Snehal
+	Code Review	  -   Amrutha , Anvitha , Poorva & Snehal
 
 
 

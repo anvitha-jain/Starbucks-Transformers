@@ -7,6 +7,8 @@ import com.project.mysystemproject.model.User;
 import com.project.mysystemproject.repository.UserRepository;
 import javax.validation.Valid;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class UserController {
@@ -26,17 +28,22 @@ public class UserController {
 		}
 	}
 	
-	@PostMapping(path = "/users",produces = "application/json; charset=UTF-8")
-	public boolean addUser(@Valid @RequestBody User user) 
+	@PostMapping(path = "/users", produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public Map<String, String> addUser(@Valid @RequestBody User user) 
 	{
+		Map<String, String> responseMap = new HashMap<String,String>();
 		List<User> listOfUser = userRepository.findByusername(user.getUsername());
 		if (listOfUser.size() == 0) // Its a new user 
 		{
 			userRepository.save(user);
-			return true;
+			responseMap.put("result","true");
+			return responseMap;
+			//return true;
 		}
-
-		return false;
+		responseMap.put("result","false");
+		return responseMap;
+		//return false;
 	}
 	
 	@GetMapping(path = "/validUsers", produces = "application/json; charset=UTF-8")

@@ -284,6 +284,18 @@ limitations under the License.
             android:textStyle="bold"
             android:textColor="@android:color/white" />
 
+        <TextView
+            android:id="@+id/response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="560dp"
+            android:padding="4dip"
+            android:text="response:"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
 </LinearLayout>

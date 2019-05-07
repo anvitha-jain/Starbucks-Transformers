@@ -13,8 +13,10 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
@@ -79,6 +81,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private String HttpPost(String myUrl) throws IOException, JSONException {
         String result = "";
+        String readLine = null;
+        String apiResonse = null;
 
         URL url = new URL(myUrl);
 
@@ -99,9 +103,22 @@ public class RegisterActivity extends AppCompatActivity {
         // 5. return response messag
         String responseMsg = conn.getResponseMessage();
         int code = conn.getResponseCode();
+        if (code == 200)
+        {
+            //Log.v("***func", "Message okay");
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            StringBuffer response = new StringBuffer();
+            while ((readLine = in.readLine()) != null)
+            {
+                response.append(readLine);
+            }
+            in.close();
+            // Log.v("**resposne**", response.toString());
+            apiResonse = response.toString();
+        }
         responseMsg += "";
 
-        Log.i(MainActivity.class.toString(), responseMsg + "    " + code);
+        Log.i(MainActivity.class.toString(), apiResonse + "    " + code);
 
         return responseMsg;
     }

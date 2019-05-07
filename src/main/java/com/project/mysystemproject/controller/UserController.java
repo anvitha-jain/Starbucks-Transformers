@@ -14,7 +14,7 @@ public class UserController {
 	@Autowired
     UserRepository userRepository;
     
-	@GetMapping("/users")
+	@GetMapping(path = "/users",produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public List<User> getUsers(@RequestParam(value = "username", required = false) String userName) 
 	{
@@ -26,7 +26,7 @@ public class UserController {
 		}
 	}
 	
-	@PostMapping("/users")
+	@PostMapping(path = "/users",produces = "application/json; charset=UTF-8")
 	public boolean addUser(@Valid @RequestBody User user) 
 	{
 		List<User> listOfUser = userRepository.findByusername(user.getUsername());
@@ -39,7 +39,7 @@ public class UserController {
 		return false;
 	}
 	
-	@GetMapping("/validUsers")
+	@GetMapping(path = "/validUsers", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public boolean isValidUser(@RequestParam(value = "username") String username,@RequestParam(value = "password") String password)
 	{

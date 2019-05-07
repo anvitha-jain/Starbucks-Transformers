@@ -11,8 +11,6 @@ Final project for Starbucks by Team Transformers.
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
 * Implemented Autoscalling of the EC2 instance.
-
-testing automated deployment - test 1
  
 **List of REST APIs**	
 ---
@@ -46,7 +44,7 @@ testing automated deployment - test 1
 * Sign Up API Anvitha Jain
 * Manual Testing Login and Sign up APIs Anvitha Jain
 * Add Card API Amrutha Singh
-* Reload Card API Amrutha Singh(Need to be done)
+* Reload Card API Amrutha Singh
 * Manual Testing AddCard and ReloadCard APIs Amrutha Singh
 * User Profile API Snehal Yeole
 * Get Card Details API Snehal Yeole
@@ -56,9 +54,6 @@ testing automated deployment - test 1
 * Get all Transactions API Poorva Agarwal
 * Manual Testing of Payment Flows Poorva Agarwal
 * RDS setup Snehal Yeole
-
-
-
 
 
 

@@ -6,7 +6,7 @@ Final project for Starbucks by Team Transformers.
 * Used MVC design pattern to create API's
 * Created Android Aplication for UI which is displaying result for all API's
 
-**Cloud Deployment**
+**CI/CD Deployment**
 ---
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.

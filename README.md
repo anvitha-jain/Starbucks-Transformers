@@ -6,13 +6,37 @@ Final project for Starbucks by Team Transformers.
 * Used MVC design pattern to create API's
 * Created Android Aplication for UI which is displaying result for all API's
 
-**Cloud Deployment**
+**CI/CD Deployment**
 ---
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
 * Implemented Autoscalling of the EC2 instance.
 
 ![archi](https://user-images.githubusercontent.com/42703827/57346097-2704a580-7102-11e9-8790-38c26d079399.png)
+
+
+
+## Feature Set 
+
+Add Cards API </br> 
+Manage Cards API </br> 
+Payment API </br> 
+Authentication API </br> 
+User Profile API </br> 
+</br> 
+<b> Extra </b> </br> 
+
+Android Mobile Application </br> 
+Automated Cloud Deployment via CI/CD pipeline which consists of Jenkins.
+
+
+## Design Decisions 
+
+This project uses Model-View-Controller design. The design was made keeping in mind reusability, de-coupling of components and maintaining a large size application. </br>
+
+- For the ease of use, instead of displaying the API response via Postman, we have implemented an interactive Android application. </br>
+
+- For the ease of on-going maintainability and deployments, the deployment pipeline on this application is completely automated via Jenkins.
 
  
 **List of REST APIs**	
@@ -35,6 +59,14 @@ Final project for Starbucks by Team Transformers.
 [Sprint Task Sheet ](https://docs.google.com/spreadsheets/d/1wZ6J73Sqq0Yh1U7rifbENHNeRzIHVIThHpyF4cKBMtY/edit#gid=1239946250)
 
 [Story Board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
+
+
+
+
+## Deployment Architecture Diagram
+
+![archi (1)](https://user-images.githubusercontent.com/42703827/57350591-828b5f00-7113-11e9-966a-0e7ce56301bf.png)
+
 
 **Team Member-Contributions**
 ---

@@ -30,4 +30,13 @@ public class DashboardActivity extends AppCompatActivity {
         finish();
     }
 
+    public void openUserProfileActivity(View v){
+        Intent intent = new Intent(DashboardActivity.this, UserProfileActivity.class);
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
+        intent.putExtra("Username",username);
+        startActivity(intent);
+        finish();
+    }
+
 }

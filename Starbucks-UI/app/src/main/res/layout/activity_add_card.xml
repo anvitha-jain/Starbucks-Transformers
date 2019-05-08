@@ -44,7 +44,7 @@ limitations under the License.
                 android:layout_toRightOf="@+id/cardNo"
                 android:gravity="center"
                 android:background="@android:color/white"
-                android:hint="Enter Username"
+                android:hint="Enter Cardno"
                 android:textSize="20dp"
                 android:inputType="number" />
 
@@ -207,7 +207,7 @@ limitations under the License.
                 android:layout_marginTop="340dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="160dp"
-                android:hint="Enter Phone Number"
+                android:hint="Enter Username"
                 android:layout_toRightOf="@+id/userName"
                 android:gravity="center"
                 android:textSize="20dp"

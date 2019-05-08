@@ -125,6 +125,8 @@ public class UserProfileActivity extends AppCompatActivity {
 
         protected void onPostExecute (String apiResponse){
             super.onPostExecute(apiResponse);
+            Bundle bundle = getIntent().getExtras();
+            String username = bundle.getString("Username");
             Log.v("***Inside postExecute", apiResponse);
             Object s = null;
             JSONArray array= null;
@@ -146,7 +148,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
             String name = s.toString();
             Log.v("***name is***", name);
-            userNm.setText("Username:  " + name);
+            userNm.setText("Username:  " + username);
             try {
                 s = object.get("password");
             } catch (JSONException e) {

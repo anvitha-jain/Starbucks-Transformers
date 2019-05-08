@@ -11,6 +11,8 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
 
     }
 
@@ -26,6 +28,9 @@ public class DashboardActivity extends AppCompatActivity {
 
     public void openManageOrderActivity(View v){
         Intent intent = new Intent(DashboardActivity.this, ManageOrderActivity.class);
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
+        intent.putExtra("Username",username);
         startActivity(intent);
         finish();
     }

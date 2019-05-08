@@ -35,6 +35,7 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         String amount = bundle.getString("OrderAmount");
+        String username = bundle.getString("Username");
         Log.i("---------------------",amount);
         txt_total_amount = (EditText)findViewById(R.id.populateAmount);
         txt_total_amount.setText("$"+amount);
@@ -73,15 +74,19 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
 
-            if(result.equals("Username already exists"))
+            if(result.equals("Insufficient funds"))
             {
-                Toast.makeText(getApplicationContext(), "User already registered", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Insufficient funds", Toast.LENGTH_SHORT).show();
             }
             else
             {
-                Toast.makeText(getApplicationContext(), "Successfully Registered", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
             }
             Intent intent = new Intent(TotalOrderAmountActivity.this, CardActivity.class);
+
+            Bundle bundle = getIntent().getExtras();
+            String username = bundle.getString("Username");
+            intent.putExtra("Username",username);
             startActivity(intent);
             finish();
 
@@ -135,13 +140,14 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
 
     private JSONObject buidJsonObject() throws JSONException {
 
+        Bundle bundle = getIntent().getExtras();
+        String amount = bundle.getString("OrderAmount");
+        String username = bundle.getString("Username");
+
         JSONObject jsonObject = new JSONObject();
-        jsonObject.accumulate("username", txt_username.getText().toString());
-        jsonObject.accumulate("password",  txt_password.getText().toString());
-        jsonObject.accumulate("fname",  txt_fname.getText().toString());
-        jsonObject.accumulate("lname",  txt_lname.getText().toString());
-        jsonObject.accumulate("phone",  txt_phone.getText().toString());
-        jsonObject.accumulate("city",  txt_city.getText().toString());
+        jsonObject.accumulate("username",username);
+        jsonObject.accumulate("cardno",  "12345678");
+        jsonObject.accumulate("tamount",  amount);
         return jsonObject;
     }
 

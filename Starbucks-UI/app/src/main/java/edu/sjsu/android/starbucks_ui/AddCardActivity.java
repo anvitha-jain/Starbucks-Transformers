@@ -34,6 +34,9 @@ public class AddCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
 
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
+
 
 
         card_no     =  (EditText)findViewById(R.id.enterCardNumber);
@@ -84,6 +87,9 @@ public class AddCardActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Successfully added", Toast.LENGTH_SHORT).show();
             }
             Intent intent = new Intent(AddCardActivity.this, CardActivity.class);
+            Bundle bundle = getIntent().getExtras();
+            String username = bundle.getString("Username");
+            intent.putExtra("Username",username);
             startActivity(intent);
             finish();
         }

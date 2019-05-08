@@ -24,6 +24,8 @@ public class ManageOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_order);
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
 
         coffee_qty = (EditText)findViewById(R.id.enterCoffeeqty);
         donut_qty = (EditText)findViewById(R.id.enterDonutqty);
@@ -54,7 +56,10 @@ public class ManageOrderActivity extends AppCompatActivity {
 
     public void openOrderAmountActivity(View v){
         Intent intent = new Intent(ManageOrderActivity.this, TotalOrderAmountActivity.class);
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
         intent.putExtra("OrderAmount",stringdouble);
+        intent.putExtra("Username",username);
         startActivity(intent);
         finish();
     }

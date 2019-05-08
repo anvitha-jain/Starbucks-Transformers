@@ -25,9 +25,9 @@ public class CardActivity extends AppCompatActivity {
 
     public void openViewCardDeatilsActivity(View v){
         Intent intent = new Intent(CardActivity.this, ViewCardDetails.class);
-        Bundle bundle = getIntent().getExtras();
-        String username = bundle.getString("Username");
-        intent.putExtra("Username",username);
+//        Bundle bundle = getIntent().getExtras();
+//        String username = bundle.getString("Username");
+//        intent.putExtra("Username",username);
         startActivity(intent);
         finish();
     }

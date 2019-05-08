@@ -28,15 +28,18 @@ public class CardController {
 	}
 	
 	@PostMapping("/cards")
-	public boolean addCard(@Valid @RequestBody Card card) 
+	public Map<String, String> addCard(@Valid @RequestBody Card card) 
 	{
+		Map<String, String> responseMap = new HashMap<String,String>();
 		List<Card> listOfAddedCards = cardRepository.findBycardno(card.getCardno());
 		if (listOfAddedCards.size() == 0) // Its a new card
 		{
 			cardRepository.save(card);
-			return true;
+			responseMap.put("result","Successfully added");
+			return responseMap;
 		}
 
-		return false;
+		responseMap.put("result","Card Number invalid");
+		return responseMap;
 	}
 }

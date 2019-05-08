@@ -23,11 +23,11 @@ import java.net.URL;
 public class AddCardActivity extends AppCompatActivity {
     private Button btn_add;
     private TextView txt_view;
-    private EditText card_no, card_expiry, card_holder, card_cvv, userName, card_balance;
+    private EditText card_no, card_expiry, card_holder, card_cvv, card_balance;
     String cardholdername, username;
     int cardno, cardexpiry, cvv;
     double balance;
-    String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/cards";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,16 +35,16 @@ public class AddCardActivity extends AppCompatActivity {
 
 
 
-        card_no     =   findViewById(R.id.enterCardNumber);
-        card_expiry      =   findViewById(R.id.enterCardExpiry);
-        card_holder      =      findViewById(R.id.enterCardHolderName);
-        card_cvv      =      findViewById(R.id.enterCVV);
-        card_balance      =     findViewById(R.id.enterBalance);
+        card_no     =  (EditText)findViewById(R.id.enterCardNumber);
+        card_expiry      = (EditText)findViewById(R.id.enterCardExpiry);
+        card_holder      =   (EditText)findViewById(R.id.enterCardHolderName);
+        card_cvv      =     (EditText)findViewById(R.id.enterCVV);
+        card_balance      =  (EditText)findViewById(R.id.enterBalance);
         //userName =            findViewById(R.id.enterUserName);
 
-        txt_view.setText("Result");
+       // txt_view.setText("Result");
         btn_add = findViewById(R.id.add);
-
+        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/cards";
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,8 +119,8 @@ public class AddCardActivity extends AppCompatActivity {
         jsonObject.accumulate("cardholdername", card_holder.getText().toString());
         jsonObject.accumulate("cvv", card_cvv.getText().toString());
         jsonObject.accumulate("username", username);
-        String userNm = userName.getText().toString();
-        Log.v("***Username***", userNm);
+//        String userNm = userName.getText().toString();
+//        Log.v("***Username***", userNm);
         jsonObject.accumulate("balance", card_balance.getText().toString());
         return jsonObject;
     }

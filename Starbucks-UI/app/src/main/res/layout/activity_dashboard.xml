@@ -55,7 +55,7 @@ limitations under the License.
             android:layout_height="60dp"
             android:layout_alignParentBottom="false"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="150dp"
             android:background="@android:color/black"
             android:text="Manage Cards"
             android:onClick="openCardPage"
@@ -69,12 +69,27 @@ limitations under the License.
             android:layout_alignParentBottom="false"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/btn_manage_cards"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="55dp"
             android:background="@android:color/holo_red_light"
             android:text="Order"
             android:onClick="openManageOrderActivity"
             android:textStyle="bold"
             android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_user_profile"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_order"
+            android:layout_marginTop="55dp"
+            android:background="@color/colorPrimary"
+            android:text="User Profile"
+            android:onClick="openUserProfileActivity"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
 
     </RelativeLayout>
 

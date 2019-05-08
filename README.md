@@ -30,6 +30,13 @@ Android Mobile Application </br>
 Automated Cloud Deployment via CI/CD pipeline which consists of Jenkins.
 
 
+<b> Design Decisions </b>
+
+This project uses Model-View-Controller design. The design was made keeping in mind reusability, de-coupling of components and maintaining a large size application. </br>
+
+- For the ease of use, instead of displaying the API response via Postman, we have implemented an interactive Android application. </br>
+
+- For the ease of on-going maintainability and deployments, the deployment pipeline on this application is completely automated via Jenkins.
 
  
 **List of REST APIs**	

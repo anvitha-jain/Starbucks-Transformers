@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,6 +24,10 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.simple.parser.JSONParser;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -123,10 +128,14 @@ public class RegisterActivity extends AppCompatActivity {
         responseMsg += "";
 
         Log.i(MainActivity.class.toString(), apiResonse + "   " + code);
-        JSONObject myobj = (JSONObject)myparser.parse(apiResonse);
-        JSONObject myRateObj = (JSONObject)myobj.get("result");
-        sObject =  myRateObj.get("result");
-        String msg   = sObject.toString();
+//        JSONObject myobj = (JSONObject)myparser.parse(apiResonse);
+//        JSONObject myRateObj = (JSONObject)myobj.get("result");
+//        sObject =  myRateObj.get("result");
+//        String msg   = sObject.toString();
+
+
+
+
 
         return apiResonse;
     }

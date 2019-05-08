@@ -37,7 +37,7 @@ public class UserController {
 		if (listOfUser.size() == 0) // Its a new user 
 		{
 			userRepository.save(user);
-			responseMap.put("result","Successfuly registered");
+			responseMap.put("result","Successfuly test");
 			return responseMap;
 			//return true;
 		}

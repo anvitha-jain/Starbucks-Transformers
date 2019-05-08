@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_login;
     private EditText txt_username;
     private EditText txt_password;
-    String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+txt_username+"&password="+txt_password;
+   // String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+txt_username+"&password="+txt_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,8 @@ public class LoginActivity extends AppCompatActivity {
         btn_login = (Button)findViewById(R.id.login);
         txt_username = (EditText)findViewById(R.id.enterUserName);
         txt_password = (EditText)findViewById(R.id.enterPassword);
+
+        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+txt_username+"&password="+txt_password;
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Create a URL object holding our url
                 URL myUrl = new URL(Url);
-
+            Log.i(MainActivity.class.toString(), Url + " -------------------------  " );
                 //Create a connection
                 HttpURLConnection connection =(HttpURLConnection)
                         myUrl.openConnection();
@@ -109,26 +112,41 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Set our result equal to our stringBuilder
                 apiResponse = stringBuilder.toString();
-            JSONObject response = null;
-
-                response = new JSONObject(apiResponse);
+            Log.i(MainActivity.class.toString(), apiResponse + " -------------------------  " );
+                JSONObject response = new JSONObject(apiResponse);
                 String message = response.getString("result");
-                Log.i(MainActivity.class.toString(), message + " --------  YAYAYAYAYAY  " );
+            Log.i(MainActivity.class.toString(), message + " --------  YAYAYAYAYAY  " );
                 return message;
-                
+
         }
 
         protected void onPostExecute(String result){
             super.onPostExecute(result);
+            if(result.equals("Invalid credentials"))
+            {
+                Toast.makeText(getApplicationContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Successfully Logged In", Toast.LENGTH_SHORT).show();
+                String username = txt_username.getText().toString();
+
+                Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                intent.putExtra("Username",username);
+                Log.i(MainActivity.class.toString(), username + " ------------ " );
+                startActivity(intent);
+                finish();
+            }
+
         }
 
     }
 
-    public void openDashboard(View v){
-        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-        startActivity(intent);
-        finish();
-    }
+//    public void openDashboard(View v){
+//        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+//        startActivity(intent);
+//        finish();
+//    }
 
     public void openRegisterActivity(View v){
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);

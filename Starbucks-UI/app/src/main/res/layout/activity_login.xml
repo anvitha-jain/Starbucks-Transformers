@@ -113,7 +113,7 @@ limitations under the License.
                 android:hint="Enter password"
                 android:textSize="20dp"
                 android:background="@android:color/white"
-                android:inputType="phone" />
+                android:inputType="text" />
         </LinearLayout>
 
         <Button
@@ -130,7 +130,6 @@ limitations under the License.
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="Login"
-            android:onClick="openDashboard"
             android:textStyle="bold"
             android:textColor="@android:color/white" />
 

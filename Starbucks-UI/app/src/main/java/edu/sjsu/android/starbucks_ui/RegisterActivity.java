@@ -122,22 +122,15 @@ public class RegisterActivity extends AppCompatActivity {
                 response.append(readLine);
             }
             in.close();
-            // Log.v("**resposne**", response.toString());
             apiResonse = response.toString();
         }
         responseMsg += "";
 
         Log.i(MainActivity.class.toString(), apiResonse + "   " + code);
-//        JSONObject myobj = (JSONObject)myparser.parse(apiResonse);
-//        JSONObject myRateObj = (JSONObject)myobj.get("result");
-//        sObject =  myRateObj.get("result");
-//        String msg   = sObject.toString();
-
-
-
-
-
-        return apiResonse;
+        JSONObject response = new JSONObject(apiResonse);
+        String message = response.getString("result");
+        Log.i(MainActivity.class.toString(), message + "   YAYAYAYAYAY  " + code);
+        return message;
     }
 
     private JSONObject buidJsonObject() throws JSONException {

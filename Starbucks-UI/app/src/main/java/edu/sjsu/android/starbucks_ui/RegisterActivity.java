@@ -78,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             txt_view.setText(result);
-           
+
 
         }
     }
@@ -123,10 +123,7 @@ public class RegisterActivity extends AppCompatActivity {
         responseMsg += "";
 
         Log.i(MainActivity.class.toString(), apiResonse + "   " + code);
-        if(apiResonse == "false")
-        {
-            txt_view.setText(result);
-        }
+
         return apiResonse;
     }
 

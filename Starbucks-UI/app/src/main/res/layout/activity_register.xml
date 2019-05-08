@@ -257,14 +257,14 @@ limitations under the License.
             android:layout_alignParentRight="false"
             android:layout_centerHorizontal="false"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="90dp"
             android:background="@android:color/black"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="SignUp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/close"
@@ -289,7 +289,7 @@ limitations under the License.
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="560dp"
+            android:layout_marginTop="60dp"
             android:padding="4dip"
             android:text="response:"
             android:textColor="@android:color/holo_red_dark"

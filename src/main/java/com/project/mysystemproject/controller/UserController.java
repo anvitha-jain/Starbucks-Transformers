@@ -37,11 +37,11 @@ public class UserController {
 		if (listOfUser.size() == 0) // Its a new user 
 		{
 			userRepository.save(user);
-			responseMap.put("result","true");
+			responseMap.put("result","Successfully signed up");
 			return responseMap;
 			//return true;
 		}
-		responseMap.put("result","false");
+		responseMap.put("result","User already exists");
 		return responseMap;
 		//return false;
 	}

@@ -1,5 +1,6 @@
 package edu.sjsu.android.starbucks_ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -76,6 +78,8 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             txt_view.setText(result);
+           
+
         }
     }
 
@@ -118,9 +122,12 @@ public class RegisterActivity extends AppCompatActivity {
         }
         responseMsg += "";
 
-        Log.i(MainActivity.class.toString(), apiResonse + "    " + code);
-
-        return responseMsg;
+        Log.i(MainActivity.class.toString(), apiResonse + "   " + code);
+        if(apiResonse == "false")
+        {
+            txt_view.setText(result);
+        }
+        return apiResonse;
     }
 
     private JSONObject buidJsonObject() throws JSONException {

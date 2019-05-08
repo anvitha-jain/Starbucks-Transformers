@@ -27,14 +27,18 @@ public class TransactionController {
 	CardRepository cardRepo;
 	
 	@PostMapping("/payments")
-	public boolean addTransaction(@Valid @RequestBody Transaction tran) {
+	public Map<String, String> addTransaction(@Valid @RequestBody Transaction tran) {
+		
+		Map<String, String> responseMap = new HashMap<String,String>();
 		if (tran.getTamount() > cardRepo.findbalanceBycardno(tran.getCardno())) {
-			return false;
+			responseMap.put("result","Insufficient funds");
+			return responseMap;
 		}
 		double balance = cardRepo.findbalanceBycardno(tran.getCardno()) - tran.getTamount();
 		cardRepo.updateCardbalance(balance,tran.getCardno());
 		tranRepository.save(tran);
-		return true;
+		responseMap.put("result","Payment Successful");
+		return responseMap;
 	}
 	
 	@GetMapping("/transactions")

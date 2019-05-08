@@ -34,7 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btn_save;
     private EditText txt_username, txt_password, txt_fname, txt_lname, txt_phone , txt_city;
     String username, password, fname, lname, phone, city;
-    String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
         txt_phone       =   (EditText)findViewById(R.id.enterPhone);
         txt_city =    (EditText)findViewById(R.id.enterCity);
         btn_save = (Button)findViewById(R.id.signUp);
-
+       final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users";
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -123,8 +123,10 @@ public class RegisterActivity extends AppCompatActivity {
         responseMsg += "";
 
         Log.i(MainActivity.class.toString(), apiResonse + "   " + code);
-        JSONObject myobj = (JSONObject)myparser.parse(apiResponse);
-        JSONObject myRateObj = (JSONObject)myobj.get("rates");
+        JSONObject myobj = (JSONObject)myparser.parse(apiResonse);
+        JSONObject myRateObj = (JSONObject)myobj.get("result");
+        sObject =  myRateObj.get("result");
+        String msg   = sObject.toString();
 
         return apiResonse;
     }

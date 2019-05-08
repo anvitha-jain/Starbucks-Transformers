@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class CardActivity extends AppCompatActivity {
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +27,12 @@ public class CardActivity extends AppCompatActivity {
 
     public void openViewCardDeatilsActivity(View v){
         Intent intent = new Intent(CardActivity.this, ViewCardDetails.class);
-//        Bundle bundle = getIntent().getExtras();
-//        String username = bundle.getString("Username");
-//        intent.putExtra("Username",username);
+        Bundle bundle = getIntent().getExtras();
+         String username1 = bundle.getString("Username");
+        intent.putExtra("Username",username1);
         startActivity(intent);
         finish();
     }
+
+
 }

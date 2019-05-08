@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -74,7 +75,17 @@ public class AddCardActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            txt_view.setText(result);
+            if(result.equals("Card Number invalid"))
+            {
+                Toast.makeText(getApplicationContext(), "Card Number invalid", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Successfully added", Toast.LENGTH_SHORT).show();
+            }
+            Intent intent = new Intent(AddCardActivity.this, CardActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 

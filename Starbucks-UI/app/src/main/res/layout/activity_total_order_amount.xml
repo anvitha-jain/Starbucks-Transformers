@@ -88,7 +88,7 @@ limitations under the License.
             android:layout_marginTop="200dp"
             android:layout_marginLeft="20dp"
             android:padding="4dip"
-            android:text="Select Card:"
+            android:text="Added Card:"
             android:textColor="@android:color/white"
             android:textSize="25dp"
             android:textStyle="bold" />

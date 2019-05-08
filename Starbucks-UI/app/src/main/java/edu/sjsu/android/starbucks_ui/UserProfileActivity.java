@@ -42,7 +42,7 @@ public class UserProfileActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String username = bundle.getString("Username");
 
-        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users?username=" + username;
+        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users?username="+username;
         user_profile = findViewById(R.id.get_user_details);
 
         user_profile.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +85,7 @@ public class UserProfileActivity extends AppCompatActivity {
             String inputLine;
 
             URL myUrl = new URL(Url);
-            Log.i(MainActivity.class.toString(), Url + " -------------------------  " );
+            Log.i("hello",Url + " -------------------------  " );
             //Create a connection
             HttpURLConnection connection =(HttpURLConnection)
                     myUrl.openConnection();

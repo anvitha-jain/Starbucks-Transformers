@@ -19,14 +19,14 @@ Final project for Starbucks by Team Transformers.
 <b> Feature Set </b>
 
 Add Cards API </br> 
-Manage Cards API
-Payment API
-Authentication API
-User Profile API
+Manage Cards API </br> 
+Payment API </br> 
+Authentication API </br> 
+User Profile API </br> 
+</br> 
+<b> Extra </b> </br> 
 
-<b> Extra </b>
-
-Android Mobile Application
+Android Mobile Application </br> 
 Automated Cloud Deployment via CI/CD pipeline which consists of Jenkins.
 
 

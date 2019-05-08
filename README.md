@@ -14,6 +14,23 @@ Final project for Starbucks by Team Transformers.
 
 ![archi](https://user-images.githubusercontent.com/42703827/57346097-2704a580-7102-11e9-8790-38c26d079399.png)
 
+
+
+<b> Feature Set </b>
+
+Add Cards API
+Manage Cards API
+Payment API
+Authentication API
+User Profile API
+
+<b> Extra </b>
+
+Android Mobile Application
+Automated Cloud Deployment via CI/CD pipeline which consists of Jenkins.
+
+
+
  
 **List of REST APIs**	
 ---

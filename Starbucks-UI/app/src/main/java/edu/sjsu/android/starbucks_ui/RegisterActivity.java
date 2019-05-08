@@ -32,7 +32,6 @@ import org.json.simple.parser.JSONParser;
 public class RegisterActivity extends AppCompatActivity {
 
     private Button btn_save;
-    private TextView txt_view;
     private EditText txt_username, txt_password, txt_fname, txt_lname, txt_phone , txt_city;
     String username, password, fname, lname, phone, city;
     String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users";
@@ -47,9 +46,6 @@ public class RegisterActivity extends AppCompatActivity {
         txt_lname      =    (EditText)findViewById(R.id.enterLastName);
         txt_phone       =   (EditText)findViewById(R.id.enterPhone);
         txt_city =    (EditText)findViewById(R.id.enterCity);
-        txt_view = (TextView)findViewById(R.id.response);
-
-        txt_view.setText("Result");
         btn_save = (Button)findViewById(R.id.signUp);
 
 
@@ -82,8 +78,18 @@ public class RegisterActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            txt_view.setText(result);
 
+            if(result.equals("Username already exists"))
+            {
+                Toast.makeText(getApplicationContext(), "User already registered", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), "Successfully Registered", Toast.LENGTH_SHORT).show();
+            }
+           Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
 
         }
     }

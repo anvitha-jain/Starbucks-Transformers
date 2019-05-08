@@ -29,6 +29,9 @@ public class LoginActivity extends AppCompatActivity {
     private EditText txt_password;
    // String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+txt_username+"&password="+txt_password;
 
+    String sBaseURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/";
+    String sEndpoint = "validUsers";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,18 +40,31 @@ public class LoginActivity extends AppCompatActivity {
         btn_login = (Button)findViewById(R.id.login);
         txt_username = (EditText)findViewById(R.id.enterUserName);
         txt_password = (EditText)findViewById(R.id.enterPassword);
+//        String username = txt_username.getText().toString();
+//        String password = txt_password.getText().toString();
 
-        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+txt_username+"&password="+txt_password;
+        //final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+username+"&password="+password;
+
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                String username = txt_username.getText().toString();
+                String password = txt_password.getText().toString();
+                
+                if(isValid(username, password))
+                {
+                    String serviceURL = sBaseURL + sEndpoint + "?username="+username+ "&password="+password;
 
+                    LoginActivity.HttpGetRequest runner = new LoginActivity.HttpGetRequest();
 
-                LoginActivity.HttpGetRequest runner = new LoginActivity.HttpGetRequest();
-
-                runner.execute(serviceURL);
+                    runner.execute(serviceURL);
+                }
+                else
+                {
+                    Toast.makeText(LoginActivity.this, "Please fill username & password.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -80,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Create a URL object holding our url
                 URL myUrl = new URL(Url);
-            Log.i(MainActivity.class.toString(), Url + " -------------------------  " );
+         //   Log.i(MainActivity.class.toString(), Url + " -------------------------  " );
                 //Create a connection
                 HttpURLConnection connection =(HttpURLConnection)
                         myUrl.openConnection();
@@ -112,10 +128,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Set our result equal to our stringBuilder
                 apiResponse = stringBuilder.toString();
-            Log.i(MainActivity.class.toString(), apiResponse + " -------------------------  " );
+            //Log.i(MainActivity.class.toString(), apiResponse + " ----Poorva---------------------  " );
                 JSONObject response = new JSONObject(apiResponse);
                 String message = response.getString("result");
-            Log.i(MainActivity.class.toString(), message + " --------  YAYAYAYAYAY  " );
+          //  Log.i(MainActivity.class.toString(), message + " --------  YAYAYAYAYAY  " );
                 return message;
 
         }
@@ -133,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                 intent.putExtra("Username",username);
-                Log.i(MainActivity.class.toString(), username + " ------------ " );
+              //  Log.i(MainActivity.class.toString(), username + " ------------ " );
                 startActivity(intent);
                 finish();
             }
@@ -154,6 +170,13 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 
+    public boolean isValid(String userName, String password)
+    {
+        if(userName.isEmpty() || password.isEmpty())
+            return false;
+
+        return true;
+    }
 
 
 }

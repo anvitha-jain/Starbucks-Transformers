@@ -10,6 +10,8 @@ public class AddCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
     }
 
     public void openCardActivity(View v){

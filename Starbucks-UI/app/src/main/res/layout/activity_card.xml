@@ -72,6 +72,7 @@ limitations under the License.
             android:layout_marginTop="65dp"
             android:background="@android:color/holo_red_light"
             android:text="View Card"
+            android:onClick="openViewCardDeatilsActivity"
             android:textStyle="bold"
             android:textColor="@android:color/white" />
 

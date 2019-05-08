@@ -37,7 +37,8 @@ Final project for Starbucks by Team Transformers.
 [Story Board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
 
 
-Deployment Diagram
+
+<b> Deployment Diagram </b>
 
 ![archi (1)](https://user-images.githubusercontent.com/42703827/57350408-d0ec2e00-7112-11e9-8854-2a37cd6ce4a5.png)
 

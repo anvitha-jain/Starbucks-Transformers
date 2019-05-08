@@ -63,7 +63,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 
 
-## Deployment Diagram
+## Deployment Architecture Diagram
 
 ![archi (1)](https://user-images.githubusercontent.com/42703827/57350591-828b5f00-7113-11e9-966a-0e7ce56301bf.png)
 

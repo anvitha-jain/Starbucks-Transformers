@@ -148,7 +148,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
             String name = s.toString();
             Log.v("***name is***", name);
-            userNm.setText("Username:  " + username);
+            userNm.setText("Username:  " + name);
             try {
                 s = object.get("password");
             } catch (JSONException e) {

@@ -7,6 +7,7 @@ import com.project.mysystemproject.model.User;
 import com.project.mysystemproject.repository.UserRepository;
 import javax.validation.Valid;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,12 +21,15 @@ public class UserController {
 	@GetMapping(path = "/users",produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public List<User> getUsers(@RequestParam(value = "username", required = false) String userName) 
-	{
-		if (userName == null || userName.isEmpty()) {
-			return userRepository.findAll();
-		} else {
+	{		
+		if (userName == null || userName.isEmpty()) 
+		{
+			return userRepository.findAll();		
+		} 
+		else 
+		{
 			return userRepository.findByusername(userName);
-		}
+		}		
 	}
 	
 	@PostMapping(path = "/users", produces = "application/json; charset=UTF-8")

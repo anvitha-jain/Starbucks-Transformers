@@ -9,22 +9,22 @@ import android.widget.Button;
 
 public class CardActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
+
     private Button btn_viewCard;
-=======
-  private Button btn_viewCard;
->>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
+
+//  private Button btn_viewCard;
+
     String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card);
         btn_viewCard = (Button)findViewById(R.id.btn_viewCard);
-<<<<<<< HEAD
+
 
         Intent i = getIntent();
         username = i.getStringExtra("Username");
-=======
+
         Bundle bundle = getIntent().getExtras();
         String username1 = bundle.getString("Username");
 
@@ -39,7 +39,7 @@ public class CardActivity extends AppCompatActivity {
 //                finish();
 //            }
 //        });
->>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
+
 
     }
 
@@ -53,15 +53,11 @@ public class CardActivity extends AppCompatActivity {
 
     public void openViewCardDeatilsActivity(View v){
         Intent intent = new Intent(CardActivity.this, ViewCardDetails.class);
-<<<<<<< HEAD
-        Log.i("GGGGGGGGGGGGGGGGGGG-",username);
-        intent.putExtra("Username",username);
-=======
         Bundle bundle = getIntent().getExtras();
          String username1 = bundle.getString("Username");
         Log.i("GGGGGGGGGGGGGGGGGGG-----------",username1);
         intent.putExtra("Username",username1);
->>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
+
         startActivity(intent);
         finish();
     }

@@ -36,13 +36,10 @@ public class AddCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
 
-<<<<<<< HEAD
-        Intent i = getIntent();
-        userNm = i.getStringExtra("Username");
-=======
+
         Bundle bundle = getIntent().getExtras();
         String username = bundle.getString("Username");
->>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
+
 
 
 
@@ -86,21 +83,25 @@ public class AddCardActivity extends AppCompatActivity {
             if(result.equals("false"))
             {
                 Toast.makeText(getApplicationContext(), "Card Number invalid", Toast.LENGTH_SHORT).show();
+                card_no.setText("");
+                card_expiry.setText("");
+                card_holder.setText("");
+                card_cvv.setText("");
+                card_balance.setText("");
             }
             else
             {
                 Toast.makeText(getApplicationContext(), "Successfully added", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AddCardActivity.this, CardActivity.class);
+
+                Bundle bundle = getIntent().getExtras();
+                String username = bundle.getString("Username");
+                intent.putExtra("Username",username);
+
+                startActivity(intent);
+                finish();
             }
-            Intent intent = new Intent(AddCardActivity.this, CardActivity.class);
-<<<<<<< HEAD
-            intent.putExtra("Username",userNm);
-=======
-            Bundle bundle = getIntent().getExtras();
-            String username = bundle.getString("Username");
-            intent.putExtra("Username",username);
->>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
-            startActivity(intent);
-            finish();
+
         }
     }
 

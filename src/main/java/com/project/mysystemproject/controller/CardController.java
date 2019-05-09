@@ -50,17 +50,20 @@ public class CardController {
 
 	}
 	
-//	@PostMapping("/reloadcards")
-//	@ResponseBody
-//	public boolean reloadCards(@RequestParam(value = "username") String userName,@RequestParam(value = "balance") double balance,@Valid @RequestBody Card card)
-//	{
-//		if (card.getUsername() == null || card.getUsername().isEmpty()) {
-//			return false;
-//		} else {
-//			cardRepository.updateReloadCardbalance(card.getUsername(),card.getBalance());
-//			return true;
-//		}
-//	}
-//	
+	@PostMapping("/reloadcard")
+	@ResponseBody
+	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance, @Valid @RequestBody Card card)
+	{
+
+		List<Card> cards = cardRepository.findBycardno(cardno);
+		if(cards.size() == 1) {
+			double updated_balance = card.getBalance() + balance;
+			card.setBalance(updated_balance);
+			cardRepository.updateCardbalance(updated_balance, card.getCardno());
+			return true;
+		} else {
+			return false;
+		}
+	}	
 	
 }

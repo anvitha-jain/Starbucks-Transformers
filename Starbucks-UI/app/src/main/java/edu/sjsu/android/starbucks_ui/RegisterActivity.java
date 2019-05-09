@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
 
-            if(result.equals("Username already exists"))
+            if(result.equals("User already exists"))
             {
                 Toast.makeText(getApplicationContext(), "User already registered", Toast.LENGTH_SHORT).show();
             }

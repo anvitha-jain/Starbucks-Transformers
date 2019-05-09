@@ -41,11 +41,11 @@ public class UserController {
 		if (listOfUser.size() == 0) // Its a new user 
 		{
 			userRepository.save(user);
-			responseMap.put("result","Successfully registered");
+			responseMap.put("result","true");
 			return responseMap;
 			//return true;
 		}
-		responseMap.put("result","User already exists!");
+		responseMap.put("result","false");
 		return responseMap;
 		//return false;
 	}
@@ -58,11 +58,11 @@ public class UserController {
 		List<User> listOfUser = userRepository.findByusernameAndpassword(username,password);
 		if(listOfUser.size() > 0)
 		{
-			responseMap.put("result","Successfully Logged In");
+			responseMap.put("result","true");
 			return responseMap;
 		}
 		
-		responseMap.put("result","Invalid credentials");
+		responseMap.put("result","false");
 		return responseMap;
 		
 	}

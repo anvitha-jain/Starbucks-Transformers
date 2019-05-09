@@ -48,13 +48,13 @@ public class TransactionController {
 		
 		Map<String, String> responseMap = new HashMap<String,String>();
 		if (tran.getTamount() > cardRepo.findbalanceBycardno(tran.getCardno())) {
-			responseMap.put("result","Insufficient funds");
+			responseMap.put("result","false");
 			return responseMap;
 		}
 		double balance = cardRepo.findbalanceBycardno(tran.getCardno()) - tran.getTamount();
 		cardRepo.updateCardbalance(balance,tran.getCardno());
 		tranRepository.save(tran);
-		responseMap.put("result","Payment Successful");
+		responseMap.put("result","true");
 		return responseMap;
 	}
 	

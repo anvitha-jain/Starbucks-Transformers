@@ -39,12 +39,15 @@ public class CardController {
 		if (listOfAddedCards.size() == 0) // Its a new card
 		{
 			cardRepository.save(card);
-			responseMap.put("result","Successfully added");
+			responseMap.put("result","true");
+			return responseMap;
+		}
+		else
+		{
+			responseMap.put("result","false");
 			return responseMap;
 		}
 
-		responseMap.put("result","Card Number invalid");
-		return responseMap;
 	}
 	
 //	@PostMapping("/reloadcards")

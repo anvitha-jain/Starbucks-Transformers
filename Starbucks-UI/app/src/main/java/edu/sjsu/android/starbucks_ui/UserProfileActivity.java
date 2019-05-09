@@ -23,26 +23,25 @@ import java.net.URL;
 
 public class UserProfileActivity extends AppCompatActivity {
     Button user_profile;
-    //String user = "Poorva";
     TextView userNm, passwd, firstNm, lastNm, phoneNo, City;
 
-
+    String user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-       // userNm = findViewById(R.id.userName);
+        userNm = findViewById(R.id.userName);
         passwd = findViewById(R.id.password);
         firstNm = findViewById(R.id.firstName);
         lastNm = findViewById(R.id.lastName);
         phoneNo = findViewById(R.id.Phone);
         City = findViewById(R.id.city);
 
-        Bundle bundle = getIntent().getExtras();
-        String username = bundle.getString("Username");
+        Intent i = getIntent();
+        user = i.getStringExtra("Username");
 
-        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users?username="+username;
+        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users?username="+user;
         user_profile = findViewById(R.id.get_user_details);
 
         user_profile.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +121,6 @@ public class UserProfileActivity extends AppCompatActivity {
 
         }
 
-
         protected void onPostExecute (String apiResponse){
             super.onPostExecute(apiResponse);
             Log.v("***Inside postExecute", apiResponse);
@@ -146,7 +144,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
             String name = s.toString();
             Log.v("***name is***", name);
-            userNm.setText("Username:  " + name);
+            userNm.setText("Username:  " + user);
             try {
                 s = object.get("password");
             } catch (JSONException e) {
@@ -190,7 +188,12 @@ public class UserProfileActivity extends AppCompatActivity {
 
         }
     }
+    public void openDashboardActivity(View v){
+        Intent intent = new Intent(UserProfileActivity.this, DashboardActivity.class);
+        intent.putExtra("Username",user);
+        startActivity(intent);
+        finish();
+    }
 
 }
-
 

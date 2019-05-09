@@ -84,13 +84,14 @@ public class CardController {
 //	}
 //	
 	
-	@PostMapping("/reloadcards")
+		@PostMapping("/reloadcards")
 	@ResponseBody
-	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance, @Valid @RequestBody Card card)
+	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance)
 	{
 
 		List<Card> cards = cardRepository.findBycardno(cardno);
 		if(cards.size() == 1) {
+			Card card = cards.get(0);
 			double updated_balance = card.getBalance() + balance;
 			card.setBalance(updated_balance);
 			cardRepository.updateCardbalance(updated_balance, card.getCardno());

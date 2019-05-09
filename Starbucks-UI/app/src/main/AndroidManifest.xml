@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewCardDetails"></activity>
+        <activity android:name=".Transaction"></activity>
+        <activity android:name=".ViewCardDetails" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +27,7 @@
         <activity android:name=".TotalOrderAmountActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".AddCardActivity" />
-        <activity android:name=".UserProfileActivity"/>
+        <activity android:name=".UserProfileActivity" />
     </application>
 
 </manifest>

@@ -30,14 +30,19 @@ public class AddCardActivity extends AppCompatActivity {
     String cardholdername, username;
     int cardno, cardexpiry, cvv;
     double balance;
-
+    String userNm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
 
+<<<<<<< HEAD
+        Intent i = getIntent();
+        userNm = i.getStringExtra("Username");
+=======
         Bundle bundle = getIntent().getExtras();
         String username = bundle.getString("Username");
+>>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
 
 
 
@@ -46,9 +51,7 @@ public class AddCardActivity extends AppCompatActivity {
         card_holder      =   (EditText)findViewById(R.id.enterCardHolderName);
         card_cvv      =     (EditText)findViewById(R.id.enterCVV);
         card_balance      =  (EditText)findViewById(R.id.enterBalance);
-        //userName =            findViewById(R.id.enterUserName);
 
-       // txt_view.setText("Result");
         btn_add = findViewById(R.id.add);
         final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/cards";
         btn_add.setOnClickListener(new View.OnClickListener() {
@@ -89,9 +92,13 @@ public class AddCardActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Successfully added", Toast.LENGTH_SHORT).show();
             }
             Intent intent = new Intent(AddCardActivity.this, CardActivity.class);
+<<<<<<< HEAD
+            intent.putExtra("Username",userNm);
+=======
             Bundle bundle = getIntent().getExtras();
             String username = bundle.getString("Username");
             intent.putExtra("Username",username);
+>>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
             startActivity(intent);
             finish();
         }
@@ -153,8 +160,6 @@ public class AddCardActivity extends AppCompatActivity {
         jsonObject.accumulate("cardholdername", card_holder.getText().toString());
         jsonObject.accumulate("cvv", card_cvv.getText().toString());
         jsonObject.accumulate("username", username);
-//        String userNm = userName.getText().toString();
-//        Log.v("***Username***", userNm);
         jsonObject.accumulate("balance", card_balance.getText().toString());
         return jsonObject;
     }
@@ -174,6 +179,7 @@ public class AddCardActivity extends AppCompatActivity {
 
     public void openCardActivity(View v){
         Intent intent = new Intent(AddCardActivity.this, CardActivity.class);
+        intent.putExtra("Username",userNm);
         startActivity(intent);
         finish();
     }

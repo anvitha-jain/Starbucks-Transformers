@@ -152,7 +152,6 @@ public class ViewCardDetails extends AppCompatActivity {
         }
 
 
-            }
-        }
-
+    }
+}
 

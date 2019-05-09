@@ -41,9 +41,9 @@ public class ManageOrderActivity extends AppCompatActivity {
 
                 double q1 = Double.parseDouble(item1_qty);
                 double q2 = Double.parseDouble(item2_qty);
-		        double total_amount = (q1 * item1_price) + (q2 * item2_price);
-                 stringdouble= Double.toString(total_amount);
-		        txt_amount.setText("Total order amount: $"+stringdouble);
+                double total_amount = (q1 * item1_price) + (q2 * item2_price);
+                stringdouble= Double.toString(total_amount);
+                txt_amount.setText("Total order amount: $"+stringdouble);
 
 
 

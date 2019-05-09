@@ -50,6 +50,7 @@ public class CardController {
 
 	}
 	
+<<<<<<< HEAD
 	@GetMapping("/cardnumber")
 	@ResponseBody
 	public Map<String,String> getCardNumber(@RequestParam(value = "username", required = false) String userName) 
@@ -83,5 +84,22 @@ public class CardController {
 //		}
 //	}
 //	
+=======
+	@PostMapping("/reloadcards")
+	@ResponseBody
+	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance, @Valid @RequestBody Card card)
+	{
+
+		List<Card> cards = cardRepository.findBycardno(cardno);
+		if(cards.size() == 1) {
+			double updated_balance = card.getBalance() + balance;
+			card.setBalance(updated_balance);
+			cardRepository.updateCardbalance(updated_balance, card.getCardno());
+			return true;
+		} else {
+			return false;
+		}
+	}	
+>>>>>>> ca43ac0817cfd9405d57d4370a8f731f8e2351bc
 	
 }

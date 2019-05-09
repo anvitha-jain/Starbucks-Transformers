@@ -130,14 +130,38 @@ limitations under the License.
 
         <Button
             android:id="@+id/get_user_details"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_alignParentBottom="false"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="false"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="90dp"
             android:layout_below="@id/city"
-            android:layout_marginTop="5dp"
-            android:background="@android:color/holo_red_light"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/black"
             android:text="User Details"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="220dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@id/city"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/holo_red_light"
+            android:text="Back"
+            android:onClick="openDashboardActivity"
             android:textStyle="bold"
             android:textColor="@android:color/white" />
 

@@ -27,7 +27,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_login;
     private EditText txt_username;
     private EditText txt_password;
-   // String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+txt_username+"&password="+txt_password;
 
     String sBaseURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/";
     String sEndpoint = "validUsers";
@@ -37,14 +36,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btn_login = (Button)findViewById(R.id.login);
-        txt_username = (EditText)findViewById(R.id.enterUserName);
-        txt_password = (EditText)findViewById(R.id.enterPassword);
-//        String username = txt_username.getText().toString();
-//        String password = txt_password.getText().toString();
-
-        //final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/validUsers?username="+username+"&password="+password;
-
+        btn_login = findViewById(R.id.login);
+        txt_username = findViewById(R.id.enterUserName);
+        txt_password = findViewById(R.id.enterPassword);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Create a URL object holding our url
                 URL myUrl = new URL(Url);
-         //   Log.i(MainActivity.class.toString(), Url + " -------------------------  " );
                 //Create a connection
                 HttpURLConnection connection =(HttpURLConnection)
                         myUrl.openConnection();
@@ -128,10 +121,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Set our result equal to our stringBuilder
                 apiResponse = stringBuilder.toString();
-            //Log.i(MainActivity.class.toString(), apiResponse + " ----Poorva---------------------  " );
                 JSONObject response = new JSONObject(apiResponse);
                 String message = response.getString("result");
-          //  Log.i(MainActivity.class.toString(), message + " --------  YAYAYAYAYAY  " );
                 return message;
 
         }
@@ -149,7 +140,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                 intent.putExtra("Username",username);
-              //  Log.i(MainActivity.class.toString(), username + " ------------ " );
+                intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
                 startActivity(intent);
                 finish();
             }
@@ -157,12 +148,6 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
-
-//    public void openDashboard(View v){
-//        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-//        startActivity(intent);
-//        finish();
-//    }
 
     public void openRegisterActivity(View v){
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);

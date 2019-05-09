@@ -7,7 +7,10 @@ import com.project.mysystemproject.repository.CardRepository;
 
 
 import javax.validation.Valid;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class CardController {
@@ -15,6 +18,7 @@ public class CardController {
 	@Autowired
 	CardRepository cardRepository;
 	
+
 	@GetMapping("/cards")
 	@ResponseBody
 	public List<Card> getCards(@RequestParam(value = "username", required = false) String userName) 
@@ -35,11 +39,31 @@ public class CardController {
 		if (listOfAddedCards.size() == 0) // Its a new card
 		{
 			cardRepository.save(card);
-			responseMap.put("result","Successfully added");
+			responseMap.put("result","true");
+			return responseMap;
+		}
+		else
+		{
+			responseMap.put("result","false");
 			return responseMap;
 		}
 
-		responseMap.put("result","Card Number invalid");
-		return responseMap;
 	}
+	
+	@PostMapping("/reloadcards")
+	@ResponseBody
+	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance, @Valid @RequestBody Card card)
+	{
+
+		List<Card> cards = cardRepository.findBycardno(cardno);
+		if(cards.size() == 1) {
+			double updated_balance = card.getBalance() + balance;
+			card.setBalance(updated_balance);
+			cardRepository.updateCardbalance(updated_balance, card.getCardno());
+			return true;
+		} else {
+			return false;
+		}
+	}	
+	
 }

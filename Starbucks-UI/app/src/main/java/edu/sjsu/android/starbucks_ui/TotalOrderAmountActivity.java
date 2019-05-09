@@ -40,7 +40,11 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         txt_total_amount = (EditText)findViewById(R.id.populateAmount);
         txt_total_amount.setText("$"+amount);
 
+<<<<<<< HEAD
         btn_payment = (Button)findViewById(R.id.payAmount);
+=======
+         btn_payment = (Button)findViewById(R.id.payAmount);
+>>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
 
         final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/payments";
 
@@ -74,7 +78,11 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
 
+<<<<<<< HEAD
             if(result.equals("Insufficient funds"))
+=======
+            if(result.equals("false"))
+>>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
             {
                 Toast.makeText(getApplicationContext(), "Insufficient funds", Toast.LENGTH_SHORT).show();
             }

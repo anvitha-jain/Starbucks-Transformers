@@ -47,7 +47,11 @@ public class RegisterActivity extends AppCompatActivity {
         txt_phone       =   (EditText)findViewById(R.id.enterPhone);
         txt_city =    (EditText)findViewById(R.id.enterCity);
         btn_save = (Button)findViewById(R.id.signUp);
+<<<<<<< HEAD
         final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users";
+=======
+       final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/users";
+>>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
 
-            if(result.equals("Username already exists"))
+            if(result.equals("false"))
             {
                 Toast.makeText(getApplicationContext(), "User already registered", Toast.LENGTH_SHORT).show();
             }

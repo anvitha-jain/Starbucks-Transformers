@@ -14,8 +14,10 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
@@ -34,8 +36,13 @@ public class AddCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
 
+<<<<<<< HEAD
         Intent i = getIntent();
         userNm = i.getStringExtra("Username");
+=======
+        Bundle bundle = getIntent().getExtras();
+        String username = bundle.getString("Username");
+>>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
 
 
 
@@ -76,7 +83,7 @@ public class AddCardActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            if(result.equals("Card Number invalid"))
+            if(result.equals("false"))
             {
                 Toast.makeText(getApplicationContext(), "Card Number invalid", Toast.LENGTH_SHORT).show();
             }
@@ -85,7 +92,13 @@ public class AddCardActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Successfully added", Toast.LENGTH_SHORT).show();
             }
             Intent intent = new Intent(AddCardActivity.this, CardActivity.class);
+<<<<<<< HEAD
             intent.putExtra("Username",userNm);
+=======
+            Bundle bundle = getIntent().getExtras();
+            String username = bundle.getString("Username");
+            intent.putExtra("Username",username);
+>>>>>>> 6b93fb891320467a76383546b4d0eb759c60a1fb
             startActivity(intent);
             finish();
         }
@@ -93,6 +106,9 @@ public class AddCardActivity extends AppCompatActivity {
 
     private String HttpPost(String myUrl) throws IOException, JSONException {
         String result = "";
+
+        String readLine = null;
+        String apiResonse = null;
 
         URL url = new URL(myUrl);
 
@@ -111,14 +127,26 @@ public class AddCardActivity extends AppCompatActivity {
         conn.connect();
 
         // 5. return response messag
-        String responseMsg = conn.getResponseMessage();
         int code = conn.getResponseCode();
-        Log.v("Response Msg: ", responseMsg);
-        responseMsg += "";
+        if (code == 200)
+        {
+            //Log.v("***func", "Message okay");
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            StringBuffer response = new StringBuffer();
+            while ((readLine = in.readLine()) != null)
+            {
+                response.append(readLine);
+            }
+            in.close();
+            apiResonse = response.toString();
+        }
 
-        Log.i(MainActivity.class.toString(), responseMsg + "    " + code);
 
-        return responseMsg;
+        Log.i(MainActivity.class.toString(), apiResonse + "   " + code);
+        JSONObject response = new JSONObject(apiResonse);
+        String message = response.getString("result");
+        Log.i(MainActivity.class.toString(), message + "   YAYAYAYAYAY  " + code);
+        return message;
     }
 
     private JSONObject buidJsonObject() throws JSONException {

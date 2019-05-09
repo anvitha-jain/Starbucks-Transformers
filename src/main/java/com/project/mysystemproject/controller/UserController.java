@@ -7,6 +7,7 @@ import com.project.mysystemproject.model.User;
 import com.project.mysystemproject.repository.UserRepository;
 import javax.validation.Valid;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,12 +21,15 @@ public class UserController {
 	@GetMapping(path = "/users",produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public List<User> getUsers(@RequestParam(value = "username", required = false) String userName) 
-	{
-		if (userName == null || userName.isEmpty()) {
-			return userRepository.findAll();
-		} else {
+	{		
+		if (userName == null || userName.isEmpty()) 
+		{
+			return userRepository.findAll();		
+		} 
+		else 
+		{
 			return userRepository.findByusername(userName);
-		}
+		}		
 	}
 	
 	@PostMapping(path = "/users", produces = "application/json; charset=UTF-8")
@@ -37,11 +41,11 @@ public class UserController {
 		if (listOfUser.size() == 0) // Its a new user 
 		{
 			userRepository.save(user);
-			responseMap.put("result","Successfully registered");
+			responseMap.put("result","true");
 			return responseMap;
 			//return true;
 		}
-		responseMap.put("result","User already exists!");
+		responseMap.put("result","false");
 		return responseMap;
 		//return false;
 	}
@@ -54,11 +58,11 @@ public class UserController {
 		List<User> listOfUser = userRepository.findByusernameAndpassword(username,password);
 		if(listOfUser.size() > 0)
 		{
-			responseMap.put("result","Successfully Logged In");
+			responseMap.put("result","true");
 			return responseMap;
 		}
 		
-		responseMap.put("result","Invalid credentials");
+		responseMap.put("result","false");
 		return responseMap;
 		
 	}

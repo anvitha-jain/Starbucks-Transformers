@@ -123,6 +123,8 @@ public class UserProfileActivity extends AppCompatActivity {
 
         protected void onPostExecute (String apiResponse){
             super.onPostExecute(apiResponse);
+            Bundle bundle = getIntent().getExtras();
+            String username = bundle.getString("Username");
             Log.v("***Inside postExecute", apiResponse);
             Object s = null;
             JSONArray array= null;

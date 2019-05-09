@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -25,7 +26,7 @@ import java.net.URL;
 
 public class TotalOrderAmountActivity extends AppCompatActivity {
 
-    private EditText txt_total_amount;
+    private EditText txt_total_amount, txtselectUserCard;
     private Button btn_payment;
 
     @Override
@@ -36,16 +37,18 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String amount = bundle.getString("OrderAmount");
         String username = bundle.getString("Username");
-        Log.i("---------------------",amount);
-        txt_total_amount = (EditText)findViewById(R.id.populateAmount);
-        txt_total_amount.setText("$"+amount);
+        Log.i("---------------------", amount);
+        txt_total_amount = (EditText) findViewById(R.id.populateAmount);
+        txt_total_amount.setText("$" + amount);
+
+        txtselectUserCard = (EditText)findViewById(R.id.selectUserCard);
+        TotalOrderAmountActivity.HttpGetCardNoRequest runner = new TotalOrderAmountActivity.HttpGetCardNoRequest();
+        final String cardUrl = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/cardnumber?username=" + username;
+        runner.execute(cardUrl);
 
 
-        btn_payment = (Button)findViewById(R.id.payAmount);
-
-
+        btn_payment = (Button) findViewById(R.id.payAmount);
         final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/payments";
-
         btn_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,20 +80,16 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
 
 
-            if(result.equals("false"))
-
-            {
+            if (result.equals("false")) {
                 Toast.makeText(getApplicationContext(), "Insufficient funds", Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
+            } else {
                 Toast.makeText(getApplicationContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
             }
             Intent intent = new Intent(TotalOrderAmountActivity.this, CardActivity.class);
 
             Bundle bundle = getIntent().getExtras();
             String username = bundle.getString("Username");
-            intent.putExtra("Username",username);
+            intent.putExtra("Username", username);
             startActivity(intent);
             finish();
 
@@ -121,13 +120,11 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         // 5. return response messag
         String responseMsg = conn.getResponseMessage();
         int code = conn.getResponseCode();
-        if (code == 200)
-        {
+        if (code == 200) {
             //Log.v("***func", "Message okay");
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             StringBuffer response = new StringBuffer();
-            while ((readLine = in.readLine()) != null)
-            {
+            while ((readLine = in.readLine()) != null) {
                 response.append(readLine);
             }
             in.close();
@@ -149,9 +146,9 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         String username = bundle.getString("Username");
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.accumulate("username",username);
-        jsonObject.accumulate("cardno",  "12345678");
-        jsonObject.accumulate("tamount",  amount);
+        jsonObject.accumulate("username", username);
+        jsonObject.accumulate("cardno", txtselectUserCard.getText().toString());
+        jsonObject.accumulate("tamount", amount);
         return jsonObject;
     }
 
@@ -167,4 +164,83 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         os.close();
     }
 
+    public class HttpGetCardNoRequest extends AsyncTask<String, Void, String> {
+        public static final String REQUEST_METHOD = "GET";
+        public static final int READ_TIMEOUT = 15000;
+        public static final int CONNECTION_TIMEOUT = 15000;
+
+        @Override
+        protected String doInBackground(String... params) {
+            String stringUrl = params[0];
+
+            try {
+                try {
+                    return HttpGETCardno(params[0]);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    return "Error!";
+                }
+            } catch (IOException e) {
+                return "Unable to retrieve web page. URL may be invalid.";
+            }
+        }
+
+        private String HttpGETCardno(String Url) throws IOException, JSONException {
+            String apiResponse;
+            String inputLine;
+
+            //Create a URL object holding our url
+            URL myUrl = new URL(Url);
+            Log.i(MainActivity.class.toString(), Url + " -------------------------  ");
+            //Create a connection
+            HttpURLConnection connection = (HttpURLConnection)
+                    myUrl.openConnection();
+
+            //Set methods and timeouts
+            connection.setRequestMethod(REQUEST_METHOD);
+            connection.setReadTimeout(READ_TIMEOUT);
+            connection.setConnectTimeout(CONNECTION_TIMEOUT);
+
+            //Connect to our url
+            connection.connect();
+
+            //Create a new InputStreamReader
+            InputStreamReader streamReader = new
+                    InputStreamReader(connection.getInputStream());
+
+            //Create a new buffered reader and String Builder
+            BufferedReader reader = new BufferedReader(streamReader);
+            StringBuilder stringBuilder = new StringBuilder();
+
+            //Check if the line we are reading is not null
+            while ((inputLine = reader.readLine()) != null) {
+                stringBuilder.append(inputLine);
+            }
+
+            //Close our InputStream and Buffered reader
+            reader.close();
+            streamReader.close();
+
+            //Set our result equal to our stringBuilder
+            apiResponse = stringBuilder.toString();
+            Log.i(MainActivity.class.toString(), apiResponse + " -^^^^^^^^^^^^^^^^^^^^  ");
+            JSONObject response = new JSONObject(apiResponse);
+            String message = response.getString("result");
+            String cardno = response.getString("cardno");
+            Log.i(MainActivity.class.toString(), message + "   YAYAYAYAYAY  ");
+            Log.i(MainActivity.class.toString(), cardno + "   YAYAYAYAYAY00000000000000000  ");
+            if(message.equals("true"))
+            {
+                return cardno;
+            }
+            return message;
+
+        }
+
+        protected void onPostExecute(String cardno) {
+
+            txtselectUserCard.setText(cardno);
+        }
+
+    }
 }

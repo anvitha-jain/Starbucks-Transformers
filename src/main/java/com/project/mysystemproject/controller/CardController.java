@@ -70,27 +70,17 @@ public class CardController {
 		return responseMap;
 		
 	}
+		
+
+	/* Reload API by Amrutha Singh Balaji Singh */
 	
-//	@PostMapping("/reloadcards")
-//	@ResponseBody
-//	public boolean reloadCards(@RequestParam(value = "username") String userName,@RequestParam(value = "balance") double balance,@Valid @RequestBody Card card)
-//	{
-//		if (card.getUsername() == null || card.getUsername().isEmpty()) {
-//			return false;
-//		} else {
-//			cardRepository.updateReloadCardbalance(card.getUsername(),card.getBalance());
-//			return true;
-//		}
-//	}
-//	
-	
-		@PostMapping("/reloadcards")
+	@PostMapping("/reloadcards")
 	@ResponseBody
 	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance)
 	{
 
 		List<Card> cards = cardRepository.findBycardno(cardno);
-		if(cards.size() == 1) {
+		if(cards.size() == 1 && balance >= 0) {
 			Card card = cards.get(0);
 			double updated_balance = card.getBalance() + balance;
 			card.setBalance(updated_balance);

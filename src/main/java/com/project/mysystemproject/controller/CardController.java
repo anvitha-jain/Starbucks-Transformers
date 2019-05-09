@@ -50,7 +50,6 @@ public class CardController {
 
 	}
 	
-<<<<<<< HEAD
 	@GetMapping("/cardnumber")
 	@ResponseBody
 	public Map<String,String> getCardNumber(@RequestParam(value = "username", required = false) String userName) 
@@ -71,27 +70,18 @@ public class CardController {
 		return responseMap;
 		
 	}
+		
+
+	/* Reload API by Amrutha Singh Balaji Singh */
 	
-//	@PostMapping("/reloadcards")
-//	@ResponseBody
-//	public boolean reloadCards(@RequestParam(value = "username") String userName,@RequestParam(value = "balance") double balance,@Valid @RequestBody Card card)
-//	{
-//		if (card.getUsername() == null || card.getUsername().isEmpty()) {
-//			return false;
-//		} else {
-//			cardRepository.updateReloadCardbalance(card.getUsername(),card.getBalance());
-//			return true;
-//		}
-//	}
-//	
-=======
 	@PostMapping("/reloadcards")
 	@ResponseBody
-	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance, @Valid @RequestBody Card card)
+	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance)
 	{
 
 		List<Card> cards = cardRepository.findBycardno(cardno);
-		if(cards.size() == 1) {
+		if(cards.size() == 1 && balance >= 0) {
+			Card card = cards.get(0);
 			double updated_balance = card.getBalance() + balance;
 			card.setBalance(updated_balance);
 			cardRepository.updateCardbalance(updated_balance, card.getCardno());
@@ -100,6 +90,5 @@ public class CardController {
 			return false;
 		}
 	}	
->>>>>>> ca43ac0817cfd9405d57d4370a8f731f8e2351bc
 	
 }

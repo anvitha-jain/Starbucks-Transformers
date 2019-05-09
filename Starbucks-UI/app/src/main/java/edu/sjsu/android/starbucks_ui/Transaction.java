@@ -125,15 +125,19 @@ public class Transaction extends AppCompatActivity {
                 JSONArray array = new JSONArray(apiResponse);
                 for (int i = 0; i < array.length(); i++) {
                     JSONObject myObj = array.getJSONObject(i);
-                    String cardno = myObj.getString("cardno");
-                    String expiry = myObj.getString("cardexpiry");
-                    String cardholdername = myObj.getString("cardholdername");
-                    String cvv = myObj.getString("cvv");
+                    String tid = myObj.getString("tid");
                     String username = myObj.getString("username");
-                    String balance = myObj.getString("balance");
+                    String cardno = myObj.getString("cardno");
+                    String tamount = myObj.getString("tamount");
+                    String datetime = myObj.getString("datetime");
 
 
-                    String message = "CardNo: " + cardno + "\n" + "Cardholdername: " + cardholdername + "\n" + "Card Expiry:" + expiry;
+
+                    String message = "Transaction Id: " + tid
+                            + "\n" + "Username: " + username
+                            + "\n" + "Card No: " + cardno
+                            + "\n" + "Transaction Amount: " + tamount
+                            + "\n" + "DateTime: " + datetime;
 //                    txt_cardno.setText(cardno);
 //                    txt_cardexpiry.setText(expiry);
 //                    txt_cardhname.setText(cardholdername);
@@ -142,7 +146,8 @@ public class Transaction extends AppCompatActivity {
 //                    txt_balance.setText(balance);
 
 
-                    Log.v("My Users-------------", cardno + " " + cardholdername + " " + cvv + " " + username);
+                    Log.v("My Users-------------", message);
+                    txt_output.setText(message);
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

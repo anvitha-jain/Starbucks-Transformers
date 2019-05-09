@@ -82,16 +82,24 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
 
             if (result.equals("false")) {
                 Toast.makeText(getApplicationContext(), "Insufficient funds", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(TotalOrderAmountActivity.this, CardActivity.class);
+
+                Bundle bundle = getIntent().getExtras();
+                String username = bundle.getString("Username");
+                intent.putExtra("Username", username);
+                startActivity(intent);
+                finish();
             } else {
                 Toast.makeText(getApplicationContext(), "Payment Successful", Toast.LENGTH_SHORT).show();
-            }
-            Intent intent = new Intent(TotalOrderAmountActivity.this, CardActivity.class);
+                Intent intent = new Intent(TotalOrderAmountActivity.this, Transaction.class);
 
-            Bundle bundle = getIntent().getExtras();
-            String username = bundle.getString("Username");
-            intent.putExtra("Username", username);
-            startActivity(intent);
-            finish();
+                Bundle bundle = getIntent().getExtras();
+                String username = bundle.getString("Username");
+                intent.putExtra("Username", username);
+                startActivity(intent);
+                finish();
+            }
+
 
         }
     }

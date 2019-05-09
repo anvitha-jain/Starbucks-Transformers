@@ -22,17 +22,6 @@
         android:textColor="#ffffff"
         android:textSize="18sp" />
 
-
-
-
-
-
-
-
-
-
-
-
     <Button
         android:id="@+id/generate"
         android:layout_width="124dp"

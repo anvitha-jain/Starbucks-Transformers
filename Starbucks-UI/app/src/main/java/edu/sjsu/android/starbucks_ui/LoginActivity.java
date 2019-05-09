@@ -129,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
 
         protected void onPostExecute(String result){
             super.onPostExecute(result);
-            if(result.equals("Invalid credentials"))
+            if(result.equals("false"))
             {
                 Toast.makeText(getApplicationContext(), "Invalid credentials", Toast.LENGTH_SHORT).show();
             }

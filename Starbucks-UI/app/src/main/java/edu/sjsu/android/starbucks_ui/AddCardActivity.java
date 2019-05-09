@@ -80,7 +80,7 @@ public class AddCardActivity extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            if(result.equals("Card Number invalid"))
+            if(result.equals("false"))
             {
                 Toast.makeText(getApplicationContext(), "Card Number invalid", Toast.LENGTH_SHORT).show();
             }

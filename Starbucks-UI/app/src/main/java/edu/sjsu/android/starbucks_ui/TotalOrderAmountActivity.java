@@ -74,7 +74,7 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
 
-            if(result.equals("Insufficient funds"))
+            if(result.equals("false"))
             {
                 Toast.makeText(getApplicationContext(), "Insufficient funds", Toast.LENGTH_SHORT).show();
             }

@@ -56,7 +56,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 ![Draft_Architecture](https://user-images.githubusercontent.com/44592616/57203492-5df18480-6f65-11e9-83c0-e96e9c6ed27f.png)
 
-[Sprint Task Sheet ](https://docs.google.com/spreadsheets/d/1wZ6J73Sqq0Yh1U7rifbENHNeRzIHVIThHpyF4cKBMtY/edit#gid=1239946250)
+[Sprint Task Sheet ](https://docs.google.com/spreadsheets/d/15Wpj40Am4bEe3XgMnDBChcCjzgIvM10R8c90u-sdjQk/edit?usp=sharing)
 
 [Story Board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
 

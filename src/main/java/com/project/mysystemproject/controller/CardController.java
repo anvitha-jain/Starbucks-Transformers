@@ -50,6 +50,27 @@ public class CardController {
 
 	}
 	
+	@GetMapping("/cardnumber")
+	@ResponseBody
+	public Map<String,String> getCardNumber(@RequestParam(value = "username", required = false) String userName) 
+	{
+		Map<String, String> responseMap = new HashMap<String,String>();
+		List<Long> listOfCardnos = cardRepository.findcardnoByusername(userName);
+		int length = listOfCardnos.size();
+		if(length > 0)
+		{
+			
+			Long cardno = listOfCardnos.get(length-1);
+			responseMap.put("result","true");
+			responseMap.put("cardno",cardno.toString());
+			return responseMap;
+		}
+		
+		responseMap.put("result","false");
+		return responseMap;
+		
+	}
+	
 //	@PostMapping("/reloadcards")
 //	@ResponseBody
 //	public boolean reloadCards(@RequestParam(value = "username") String userName,@RequestParam(value = "balance") double balance,@Valid @RequestBody Card card)

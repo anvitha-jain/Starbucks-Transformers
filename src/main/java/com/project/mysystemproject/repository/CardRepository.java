@@ -23,6 +23,9 @@ public interface CardRepository extends JpaRepository<Card, Long> {
 	@Query("SELECT c.balance FROM Card c WHERE c.cardno = :cardno")
 	public double findbalanceBycardno(@Param("cardno") Long cardno);
 	
+	@Query("SELECT c.cardno FROM Card c WHERE c.username = :username")
+	public List<Long> findcardnoByusername(@Param("username") String username);
+	
 	
     
     @Query(value = "UPDATE cards c set balance =:balance where c.cardno = :cardno",

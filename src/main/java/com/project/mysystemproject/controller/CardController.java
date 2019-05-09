@@ -50,7 +50,7 @@ public class CardController {
 
 	}
 	
-	@PostMapping("/reloadcard")
+	@PostMapping("/reloadcards")
 	@ResponseBody
 	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance, @Valid @RequestBody Card card)
 	{

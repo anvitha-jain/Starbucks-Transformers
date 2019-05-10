@@ -8,14 +8,13 @@ Final project for Starbucks by Team Transformers.
 * Created Android Aplication for UI which is displaying result for all API's
 
 
-**CI/CD Deployment**
+**CI/CD Deployment Architecture**
 ---
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
 * Implemented Autoscalling of the EC2 instance.
 
 ![archi](https://user-images.githubusercontent.com/42703827/57346097-2704a580-7102-11e9-8790-38c26d079399.png)
-
 
 
 ## Feature Set 

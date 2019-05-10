@@ -53,7 +53,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 * Payment API
 * Get all transactions for a user API
 
-**Draft Architecture:**
+**Architecture:**
 ---
 
 ![Draft_Architecture](https://user-images.githubusercontent.com/44592616/57203492-5df18480-6f65-11e9-83c0-e96e9c6ed27f.png)
@@ -91,24 +91,26 @@ This project uses Model-View-Controller design. The design was made keeping in m
 **Team Member-Contributions**
 ---
 
-* Application Design and Setup Poorva Agarwal
-* Code Reviews Entire Team
-* EC2, Auto Scale Group, ELB Deployment Amrutha Singh Anvitha Jain
-* Android Application Poorva Agarwal, Snehal Yeole
-* Authentication/Login API Anvitha Jain
-* Sign Up API Anvitha Jain
-* Manual Testing Login and Sign up APIs Anvitha Jain
-* Add Card API Amrutha Singh
-* Reload Card API Amrutha Singh
-* Manual Testing AddCard and ReloadCard APIs Amrutha Singh
-* User Profile API Snehal Yeole
-* Get Card Details API Snehal Yeole
-* Manual Testing Card Flows Snehal Yeole
-* Make Payment and Update Card API Poorva Agarwal
-* Get Transaction Details of user API Poorva Agarwal
-* Get all Transactions API Poorva Agarwal
-* Manual Testing of Payment Flows Poorva Agarwal
-* RDS setup Snehal Yeole
+* Application Design and Setup: Team
+* Code Reviews: Team
+* EC2, Auto Scale Group, ELB Deployment: Amrutha Singh, Anvitha Jain
+* Android Application: Poorva Agarwal, Snehal Yeole
+* Authentication/Login API: Anvitha Jain
+* Sign Up API: Anvitha Jain
+* Manual Testing Login and Sign up APIs: Anvitha Jain
+* Add Card API: Amrutha Singh Balaji Singh 
+* Reload Card API: Amrutha Singh Balaji Singh 
+* Manual Testing AddCard and ReloadCard APIs: Amrutha Singh Balaji Singh 
+* Cloud EC2 Cluster Setup: Amrutha Singh Balaji Singh 
+* Cloud Jenkins and ELB Setup: Amrutha Singh Balaji Singh
+* User Profile API: Snehal Yeole
+* Get Card Details API: Snehal Yeole
+* Manual Testing Card Flows: Snehal Yeole
+* Make Payment and Update Card API: Poorva Agarwal
+* Get Transaction Details of user API: Poorva Agarwal
+* Get all Transactions API: Poorva Agarwal
+* Manual Testing of Payment Flows: Poorva Agarwal
+* RDS setup: Snehal Yeole
 
 
 

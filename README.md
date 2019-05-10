@@ -62,11 +62,13 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 ## Sprint Task Sheet and Story Board Links
 
-[Sprint Task Sheet ](https://docs.google.com/spreadsheets/d/15Wpj40Am4bEe3XgMnDBChcCjzgIvM10R8c90u-sdjQk/edit?usp=sharing)
+[Sprint Task Sheet and Burndown Chart ](https://docs.google.com/spreadsheets/d/15Wpj40Am4bEe3XgMnDBChcCjzgIvM10R8c90u-sdjQk/edit?usp=sharing)
 
 [Story Board/ Task board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
 
 [Project Journal ](https://github.com/amruthasingh/Starbucks-Transformers/tree/master/Sprint%20Reviews)
+
+[Weekly Sprints for individuals and Individual XP Core Vlues](https://docs.google.com/spreadsheets/d/1lKzMqVtVFNgS5SjS00B9Lt-FgD2lddVnmd6EFCSYBfs/edit?usp=sharing)
 
 
 ## Deployment Architecture Diagram

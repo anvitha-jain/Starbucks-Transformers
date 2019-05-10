@@ -43,12 +43,12 @@ public class TotalOrderAmountActivity extends AppCompatActivity {
 
         txtselectUserCard = (EditText)findViewById(R.id.selectUserCard);
         TotalOrderAmountActivity.HttpGetCardNoRequest runner = new TotalOrderAmountActivity.HttpGetCardNoRequest();
-        final String cardUrl = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/cardnumber?username=" + username;
+        final String cardUrl = "http://ec2-35-162-161-138.us-west-2.compute.amazonaws.com:5000/cardnumber?username=" + username;
         runner.execute(cardUrl);
 
 
         btn_payment = (Button) findViewById(R.id.payAmount);
-        final String serviceURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/payments";
+        final String serviceURL = "http://ec2-35-162-161-138.us-west-2.compute.amazonaws.com:5000/payments";
         btn_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

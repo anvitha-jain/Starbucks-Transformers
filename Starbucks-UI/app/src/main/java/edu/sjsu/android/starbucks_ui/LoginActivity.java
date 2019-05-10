@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText txt_username;
     private EditText txt_password;
 
-    String sBaseURL = "http://ec2-54-185-174-206.us-west-2.compute.amazonaws.com:5000/";
+    String sBaseURL = "http://ec2-35-162-161-138.us-west-2.compute.amazonaws.com:5000/";
     String sEndpoint = "validUsers";
 
     @Override

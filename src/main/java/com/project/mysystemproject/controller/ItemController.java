@@ -24,12 +24,12 @@ public class ItemController {
 	
 	@Autowired
 	ItemRepository itemRepository;
+	Item item;
 	
 	@GetMapping("/item1")
 	@ResponseBody
 	public Map<String, String> getTotalPriceCoffee(@RequestParam(value = "item_qty") Double item_qty, 
-			@RequestParam(value = "item_name") String item_name,
-			@Valid @RequestBody Item item) 
+			@RequestParam(value = "item_name") String item_name) 
 	{
 		
 		//double q2 = Double.parseDouble(item_qty);
@@ -57,8 +57,7 @@ public class ItemController {
 	@GetMapping("/item2")
 	@ResponseBody
 	public Map<String, String> getTotalPriceExpresso(@RequestParam(value = "item_qty") Double item_qty, 
-			@RequestParam(value = "item_name") String item_name,
-			@Valid @RequestBody Item item) 
+			@RequestParam(value = "item_name") String item_name) 
 	{
 		
 		//double q2 = Double.parseDouble(item_qty);

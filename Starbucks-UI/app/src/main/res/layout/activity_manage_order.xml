@@ -134,7 +134,7 @@ limitations under the License.
             android:layout_below="@+id/donut"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="90dp"
             android:background="@android:color/black"
             android:paddingLeft="10dp"
@@ -151,15 +151,75 @@ limitations under the License.
             android:layout_below="@+id/donut"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="90dp"
             android:background="@android:color/black"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="Manage Order"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/item1_price"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/donut"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginRight="90dp"
+            android:background="@android:color/black"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Total Coffee price"
             android:onClick="openOrderAmountActivity"
             android:textStyle="bold"
             android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/item2_price"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/donut"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginRight="90dp"
+            android:background="@android:color/black"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="total expresso price"
+            android:onClick="openOrderAmountActivity"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/price1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dip"
+            android:text="Price"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="340dp"
+            android:paddingLeft="60dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"/>
+        <TextView
+            android:id="@+id/price2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dip"
+            android:text="Price2"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="380dp"
+            android:paddingLeft="60dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"/>
+
 
 
 

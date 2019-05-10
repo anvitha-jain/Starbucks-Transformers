@@ -45,7 +45,7 @@ public class ViewCardDetails extends AppCompatActivity {
 
                 Bundle bundle = getIntent().getExtras();
                 String username = bundle.getString("Username");
-                final String serviceURL = "http://ec2-35-162-161-138.us-west-2.compute.amazonaws.com:5000s/cards?username="+username;
+                final String serviceURL = "http://starbucks-elb-1199172796.us-west-2.elb.amazonaws.com:8080/cards?username="+username;
 
                 ViewCardDetails.HttpGetRequest runner = new ViewCardDetails.HttpGetRequest();
 

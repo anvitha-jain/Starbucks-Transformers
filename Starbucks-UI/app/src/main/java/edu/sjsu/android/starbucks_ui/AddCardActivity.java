@@ -50,7 +50,7 @@ public class AddCardActivity extends AppCompatActivity {
         card_balance      =  (EditText)findViewById(R.id.enterBalance);
 
         btn_add = findViewById(R.id.add);
-        final String serviceURL = "http://ec2-35-162-161-138.us-west-2.compute.amazonaws.com:5000/cards";
+        final String serviceURL = "http://starbucks-elb-1199172796.us-west-2.elb.amazonaws.com:8080/cards";
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

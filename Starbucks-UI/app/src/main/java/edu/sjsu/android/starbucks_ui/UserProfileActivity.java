@@ -41,7 +41,7 @@ public class UserProfileActivity extends AppCompatActivity {
         Intent i = getIntent();
         user = i.getStringExtra("Username");
 
-        final String serviceURL = "http://ec2-35-162-161-138.us-west-2.compute.amazonaws.com:5000/users?username="+user;
+        final String serviceURL = "http://starbucks-elb-1199172796.us-west-2.elb.amazonaws.com:8080/users?username="+user;
         user_profile = findViewById(R.id.get_user_details);
 
         user_profile.setOnClickListener(new View.OnClickListener() {

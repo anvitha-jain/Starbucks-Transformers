@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.mysystemproject.model.Transaction;
 import com.project.mysystemproject.repository.CardRepository;
+import com.project.mysystemproject.repository.ItemRepository;
 import com.project.mysystemproject.repository.TransactionRepository;
 
 /** Created by Poorva Agarwal **/
@@ -27,6 +28,9 @@ public class TransactionController {
 	
 	@Autowired
 	CardRepository cardRepo;
+	
+	@Autowired
+	ItemRepository itemRepo;
 	
 
 //	@GetMapping("/orders")
@@ -53,6 +57,14 @@ public class TransactionController {
 		}
 		double balance = cardRepo.findbalanceBycardno(tran.getCardno()) - tran.getTamount();
 		cardRepo.updateCardbalance(balance,tran.getCardno());
+		String item_name1 = "coffee";
+		String item_name2 = "expresso";
+		Double stock1 = itemRepo.finditem_qtyByitem_name(item_name1);
+		Double stock2 = itemRepo.finditem_qtyByitem_name(item_name2);
+		Double updated_qty1 = stock1 - tran.getQty1();
+		Double updated_qty2 = stock2 - tran.getQty2();
+		itemRepo.updateItemqty(updated_qty1,item_name1);
+		itemRepo.updateItemqty(updated_qty2,item_name2);
 		tranRepository.save(tran);
 		responseMap.put("result","true");
 		return responseMap;

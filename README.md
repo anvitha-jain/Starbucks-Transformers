@@ -75,7 +75,8 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 ## UI Wireframe
 
-![UI-Wireframe](https://user-images.githubusercontent.com/44592616/57550062-1464b900-731a-11e9-9e94-efca841e661b.png)
+![UI-Wireframe (1)](https://user-images.githubusercontent.com/44592616/57550367-05323b00-731b-11e9-9288-05257aad6093.png)
+
 
 
 

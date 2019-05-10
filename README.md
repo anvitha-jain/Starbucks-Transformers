@@ -51,7 +51,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 * Reload Card Balance API
 * Get all cards for a user API
 * Payment API
-* Get transaction summary
+* Get all transactions for a user API
 
 **Draft Architecture:**
 ---
@@ -65,19 +65,14 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 [Sprint Task Sheet ](https://docs.google.com/spreadsheets/d/15Wpj40Am4bEe3XgMnDBChcCjzgIvM10R8c90u-sdjQk/edit?usp=sharing)
 
-[Story Board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
+[Story Board/ Task board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
+
+[Project Journal ](https://github.com/amruthasingh/Starbucks-Transformers/tree/master/Sprint%20Reviews)
 
 
 ## Deployment Architecture Diagram
 
 ![archi (1)](https://user-images.githubusercontent.com/42703827/57350591-828b5f00-7113-11e9-966a-0e7ce56301bf.png)
-
-
-## UI Wireframe
-
-![UI-Wireframe (1)](https://user-images.githubusercontent.com/44592616/57550367-05323b00-731b-11e9-9288-05257aad6093.png)
-
-
 
 
  ## XP Core Values
@@ -111,7 +106,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 * Manual Testing Card Flows Snehal Yeole
 * Make Payment and Update Card API Poorva Agarwal
 * Get Transaction Details of user API Poorva Agarwal
-* Get Transaction summary API Poorva Agarwal
+* Get all Transactions API Poorva Agarwal
 * Manual Testing of Payment Flows Poorva Agarwal
 * RDS setup Snehal Yeole
 

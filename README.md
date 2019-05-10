@@ -21,7 +21,7 @@ Final project for Starbucks by Team Transformers.
 ## Feature Set 
 
 Add Cards API </br> 
-Manage Cards API </br> 
+Manage Order API </br> 
 Payment API </br> 
 Authentication API </br> 
 User Profile API </br> 

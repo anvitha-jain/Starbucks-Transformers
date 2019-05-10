@@ -87,7 +87,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
  ## XP Core Values
 
-* Communication: Everyone in the team were meeting on a daily basis to discuss the tasks each one is working on and challenges, if there were any. We discussed of the challenges together and came up with solutions. For instance, to finalize design pattern to be used for the project, the team sat together and discussed the best strategy with is apt for the requirements. 
+* Communication: Everyone in the team were meeting on a daily basis to discuss the tasks that each one is working on and challenges, if there were any. We discussed the challenges faced by each member in the team together and came up with solutions. For instance, to finalize design pattern to be used for the project, the team sat together and discussed the best strategy with is apt for the requirements.
 
 * Simplicity: As a team we sat together and discussed to keep the project as simplistic as possible. The approach, the strategy for on-going maintenance were all well thought about and made simple.
 
@@ -95,10 +95,10 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 * Courage: Each one in the team was extremely honest about the tasks and the state each of the assigned tasks were at. Everyone in the team adapted to the on-going discussions and changes very effectively. 
 
-* Respect: Each one in the team had mutually respect for each other. Everyone were treated equal and there was a sense of responsibility in every member to complete their assigned tasks. Everyone in the team was valued. 
+* Respect: Each one in the team had mutually respect for each other. Everyone were treated equal and there was a sense of responsibility in every member to complete their assigned tasks. Everyone in the team was valued.
 
 
-**Team Member-Contributions**
+**Team Members: Contributions**
 ---
 
 * Application Design and Setup: Team

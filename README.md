@@ -73,6 +73,12 @@ This project uses Model-View-Controller design. The design was made keeping in m
 ![archi (1)](https://user-images.githubusercontent.com/42703827/57350591-828b5f00-7113-11e9-966a-0e7ce56301bf.png)
 
 
+## UI Wireframe
+
+![UI-Wireframe](https://user-images.githubusercontent.com/44592616/57550062-1464b900-731a-11e9-9e94-efca841e661b.png)
+
+
+
  ## XP Core Values
 
 * Communication: Everyone in the team were meeting on a daily basis to discuss the tasks each one is working on and challenges, if there were any. We discussed of the challenges together and came up with solutions. For instance, to finalize design pattern to be used for the project, the team sat together and discussed the best strategy with is apt for the requirements. 

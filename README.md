@@ -51,7 +51,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 * Reload Card Balance API
 * Get all cards for a user API
 * Payment API
-* Get all transactions for a user API
+* Get transaction summary
 
 **Draft Architecture:**
 ---
@@ -104,7 +104,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 * Manual Testing Card Flows Snehal Yeole
 * Make Payment and Update Card API Poorva Agarwal
 * Get Transaction Details of user API Poorva Agarwal
-* Get all Transactions API Poorva Agarwal
+* Get Transaction summary API Poorva Agarwal
 * Manual Testing of Payment Flows Poorva Agarwal
 * RDS setup Snehal Yeole
 

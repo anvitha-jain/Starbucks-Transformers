@@ -142,7 +142,9 @@ Screenshot:
 * Cloud Jenkins and ELB Setup: Amrutha Singh Balaji Singh
 * User Profile API: Snehal Yeole
 * Get Card Details API: Snehal Yeole
-* Manual Testing Card Flows: Snehal Yeole
+* Manage Order API: Snehal Yeole
+* Manual Testing User Profile, Get Card Details and Manage Order API: Snehal Yeole
+* Testing API's with Android Application
 * Make Payment and Update Card API: Poorva Agarwal
 * Get Transaction Details of user API: Poorva Agarwal
 * Get all Transactions API: Poorva Agarwal

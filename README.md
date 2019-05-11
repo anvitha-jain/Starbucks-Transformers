@@ -11,8 +11,6 @@ Final project for Starbucks by Team Transformers.
 **CI/CD Deployment Architecture**
 ---
 
-
-
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
 * Implemented Autoscalling of the EC2 instance.
 

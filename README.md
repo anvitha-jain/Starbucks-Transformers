@@ -107,7 +107,7 @@ Screenshot:
 
 ![archi (3)](https://user-images.githubusercontent.com/42703827/57556868-14ba7f80-732d-11e9-9282-8f636df9f5b2.png)
 
-## UI Wireframe
+## UI Wireframes
 
 ![UI-Wireframe (1)](https://user-images.githubusercontent.com/44592616/57556992-619e5600-732d-11e9-844e-aeb0a8758bc9.png)
 

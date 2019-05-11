@@ -36,7 +36,8 @@ Manage Order API </br>
 Payment API </br> 
 Transactions Summary API </br>
 User Profile API </br> 
-</br> 
+
+
 <b> Extra </b> </br> 
 
 Android Mobile Application </br> 
@@ -87,7 +88,6 @@ Screenshot:
 ## Deployment Architecture Diagram
 
 
-
 ![archi (1)](https://user-images.githubusercontent.com/42703827/57350591-828b5f00-7113-11e9-966a-0e7ce56301bf.png)
 
 
@@ -125,8 +125,9 @@ Screenshot:
 
 * Application Design and Setup: Team
 * Code Reviews: Team
-* EC2, Auto Scale Group, ELB Deployment: Amrutha Singh, Anvitha Jain
+* EC2, Auto Scale Group, ELB Deployment: Amrutha Singh Balaji Singh, Anvitha Jain
 * Android Application: Poorva Agarwal, Snehal Yeole
+* CI/CD pipeline Setup: Amrutha Singh Balaji Singh
 * Authentication/Login API: Anvitha Jain
 * Sign Up API: Anvitha Jain
 * Manual Testing Login and Sign up APIs: Anvitha Jain

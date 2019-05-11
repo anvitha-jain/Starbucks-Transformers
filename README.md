@@ -118,7 +118,8 @@ Screenshot:
 ## Github Contributions
 
 
-<img width="941" alt="New Contributions" src="https://user-images.githubusercontent.com/44592616/57566192-94bd0580-737e-11e9-9fa7-9eb85b9bd0f8.PNG">
+![1](https://user-images.githubusercontent.com/42703827/57567585-62b49f00-7390-11e9-849d-4ee442a6b008.png)
+
 
 
 **Team Members: Contributions**

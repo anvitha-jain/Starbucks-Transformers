@@ -1,6 +1,6 @@
 ## Starbucks
 
-Final project for Starbucks by Team Transformers.
+CMPE 202 final project Starbucks by Team Transformers.
 
 
 * Created Spring Boot Maven Project Application for building Rest API's using MySQL and JPA
@@ -8,13 +8,13 @@ Final project for Starbucks by Team Transformers.
 * Created Android Aplication for UI which is displaying result for all API's
 
 
-## Application Demo You Tube link:
+## Android Application Demo YouTube link:
 
 
 https://youtu.be/NmqMa6MRGZc
 
 
-**CI/CD Deployment Architecture**
+## CI/CD Deployment Architecture
 
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
@@ -23,7 +23,7 @@ https://youtu.be/NmqMa6MRGZc
 ![archi](https://user-images.githubusercontent.com/42703827/57346097-2704a580-7102-11e9-8790-38c26d079399.png)
 
 
-## Feature Set 
+## List of Rest APIs implemented using Spring Boot
 
 
 Authentication API </br> 
@@ -52,21 +52,9 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 - For the ease of on-going maintainability and deployments, the deployment pipeline on this application is completely automated via Jenkins.
 
- 
-**List of REST APIs**	
----
-  	
-* Sign up API
-* Authentication/Login API
-* Getting user profile API
-* Add Card API
-* Reload Card Balance API
-* Get all cards for a user API
-* Manage Order API
-* Payment API
-* Get all transactions for a user API
 
-**Architecture:**
+
+## Architecture:
 ---
 
 
@@ -107,7 +95,7 @@ Screenshot:
 
 ![archi (3)](https://user-images.githubusercontent.com/42703827/57556868-14ba7f80-732d-11e9-9282-8f636df9f5b2.png)
 
-## UI Wireframe
+## UI Wireframes
 
 ![UI-Wireframe (1)](https://user-images.githubusercontent.com/44592616/57556992-619e5600-732d-11e9-844e-aeb0a8758bc9.png)
 

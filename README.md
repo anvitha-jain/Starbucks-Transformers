@@ -23,7 +23,7 @@ https://youtu.be/NmqMa6MRGZc
 ![archi](https://user-images.githubusercontent.com/42703827/57346097-2704a580-7102-11e9-8790-38c26d079399.png)
 
 
-## Feature Set 
+## List of Rest APIs implemented using Spring Boot
 
 
 Authentication API </br> 
@@ -52,19 +52,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 - For the ease of on-going maintainability and deployments, the deployment pipeline on this application is completely automated via Jenkins.
 
- 
-## List of REST APIs
----
-  	
-* Sign up API
-* Authentication/Login API
-* Getting user profile API
-* Add Card API
-* Reload Card Balance API
-* Get all cards for a user API
-* Manage Order API
-* Payment API
-* Get all transactions for a user API
+
 
 ## Architecture:
 ---

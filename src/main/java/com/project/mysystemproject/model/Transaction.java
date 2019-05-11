@@ -8,9 +8,9 @@ import javax.validation.constraints.NotBlank;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-
+/** Created by Poorva Agarwal **/
 @Entity
-@Table(name = "transactions")
+@Table(name = "pay")
 public class Transaction {
 	
 	@Id
@@ -64,6 +64,27 @@ public class Transaction {
 	
 	private double tamount;
 	
+	
 	@CreationTimestamp
 	private LocalDateTime datetime;
+	
+	private double qty1;
+	
+	public double getQty1() {
+		return qty1;
+	}
+
+	public void setQty1(double qty1) {
+		this.qty1 = qty1;
+	}
+
+	public double getQty2() {
+		return qty2;
+	}
+
+	public void setQty2(double qty2) {
+		this.qty2 = qty2;
+	}
+
+	private double qty2;
 }

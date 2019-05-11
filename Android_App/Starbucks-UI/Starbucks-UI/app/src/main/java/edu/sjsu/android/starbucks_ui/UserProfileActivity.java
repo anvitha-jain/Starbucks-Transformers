@@ -43,7 +43,11 @@ public class UserProfileActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String username = bundle.getString("Username");
 
+<<<<<<< HEAD:Android_App/Starbucks-UI/Starbucks-UI/app/src/main/java/edu/sjsu/android/starbucks_ui/UserProfileActivity.java
         final String serviceURL = "http://starbucks-elb-1199172796.us-west-2.elb.amazonaws.com:8080/users?username="+username;
+=======
+        final String serviceURL = "http://starbucks-elb-1199172796.us-west-2.elb.amazonaws.com:8080/users?username="+user;
+>>>>>>> f4b2753b2b269a3c25937682f397d0d84eb5c901:Starbucks-UI/app/src/main/java/edu/sjsu/android/starbucks_ui/UserProfileActivity.java
         user_profile = findViewById(R.id.get_user_details);
 
         user_profile.setOnClickListener(new View.OnClickListener() {

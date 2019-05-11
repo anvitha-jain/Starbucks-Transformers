@@ -5,6 +5,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
+/* Card API by Amrutha Singh Balaji Singh */
+
 @Entity
 @Table(name = "cards")
 public class Card {

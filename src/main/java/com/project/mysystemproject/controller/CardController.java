@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/* AddCard API by Amrutha Singh Balaji Singh */
+
 @RestController
 public class CardController {
 
@@ -76,18 +78,20 @@ public class CardController {
 	
 	@PostMapping("/reloadcards")
 	@ResponseBody
-	public boolean reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance)
+	public Map<String, String> reloadCards(@RequestParam(value = "cardno") Long cardno,@RequestParam(value = "balance") double balance)
 	{
-
+                Map<String, String> responseMap = new HashMap<String,String>();
 		List<Card> cards = cardRepository.findBycardno(cardno);
 		if(cards.size() == 1 && balance >= 0) {
 			Card card = cards.get(0);
 			double updated_balance = card.getBalance() + balance;
 			card.setBalance(updated_balance);
 			cardRepository.updateCardbalance(updated_balance, card.getCardno());
-			return true;
+			responseMap.put("result","true");
+		        return responseMap;
 		} else {
-			return false;
+			responseMap.put("result","false");
+		        return responseMap;
 		}
 	}	
 	

@@ -14,7 +14,7 @@ Final project for Starbucks by Team Transformers.
 https://youtu.be/NmqMa6MRGZc
 
 
-**CI/CD Deployment Architecture**
+## CI/CD Deployment Architecture
 
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
@@ -53,7 +53,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 - For the ease of on-going maintainability and deployments, the deployment pipeline on this application is completely automated via Jenkins.
 
  
-**List of REST APIs**	
+## List of REST APIs
 ---
   	
 * Sign up API
@@ -66,7 +66,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 * Payment API
 * Get all transactions for a user API
 
-**Architecture:**
+## Architecture:
 ---
 
 

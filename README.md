@@ -123,7 +123,7 @@ Screenshot:
 
 ## Github Contributions
 
-![contribute](https://user-images.githubusercontent.com/42703827/57564157-3c750c00-735c-11e9-89b4-74bee22c43c6.png)
+<img width="937" alt="Contributions" src="https://user-images.githubusercontent.com/44592616/57565801-b0251200-7378-11e9-870c-d892c91288e2.PNG">
 
 **Team Members: Contributions**
 ---

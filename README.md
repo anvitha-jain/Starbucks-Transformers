@@ -41,8 +41,6 @@ Automated Cloud Deployment via CI/CD pipeline which consists of Jenkins.
 
 ## Design Decisions 
 
-
-
 This project uses Model-View-Controller design. The design was made keeping in mind reusability, de-coupling of components and maintaining a large size application. </br>
 
 - For the ease of use, instead of displaying the API response via Postman, we have implemented an interactive Android application. </br>

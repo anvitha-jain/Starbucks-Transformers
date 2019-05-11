@@ -1,0 +1,198 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/97fef35f9cf2070df9cb844d5a4f2494/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/poorva/.gradle/caches/transforms-2/files-2.1/a726dc647e7cdaec852f3f5b3d39aa0d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/934c549542a42298d2694c753e623cd9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/88465f8868270670efbdb80f65e0ffc8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/ab410465a0c4c408af1adaa64c0a3964/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/714b45724b01a76c28a7afa07cb5d570/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/81a6f29b38014d68cd6922dcf165d5cc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/2bb353fe23960185d920b5425570ba86/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/9fbd942346f71461392cc654e3c39a63/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/0ad020e06d2f753e4302832a80054d39/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16915e95616769cd7c9d9bbfb9659845/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/02452014c2906714cf67065acf08d000/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/4584165678f7f7d8695ec07a9c639dd3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/49692a37227d1992a5d87718064f95f6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/0627fc14b0045354853d05b29758eee1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/fcd0ff72d0a760a99162b40d84e4bd0c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16448966c20f60e927ee5adb8d6d96e8/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/2dcdf32f04c014a0c0766d86a7e03780/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/cd82e434b76e703e81765f6884741e1d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/18e6082cb368250903878d15ae5b3d93/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/8d377f75f46fce1a03f5e2b0d9d2fdf3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/79d35aa4132e7abac27a663ff9a6cd48/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/9dcfd1bf1c79839c7919bb933a487d24/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/0211ded48f318ea5edb36b0ef99be5c9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/2b01dc2b8f74f890d7e0a7bce75449da/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/3bac1d9ea495e4f31f97e3c8df37f0c3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/9a4a0355d3f0a00afc00766d64860d6f/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:7:5-31:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/poorva/.gradle/caches/transforms-2/files-2.1/a726dc647e7cdaec852f3f5b3d39aa0d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/poorva/.gradle/caches/transforms-2/files-2.1/a726dc647e7cdaec852f3f5b3d39aa0d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/fcd0ff72d0a760a99162b40d84e4bd0c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/fcd0ff72d0a760a99162b40d84e4bd0c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16448966c20f60e927ee5adb8d6d96e8/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16448966c20f60e927ee5adb8d6d96e8/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/fcd0ff72d0a760a99162b40d84e4bd0c/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:13:9-40
+activity#edu.sjsu.android.starbucks_ui.Transaction
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:14:9-58
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:14:19-46
+activity#edu.sjsu.android.starbucks_ui.ViewCardDetails
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:15:9-53
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:15:19-50
+activity#edu.sjsu.android.starbucks_ui.MainActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:16:9-22:20
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:16:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:20:27-74
+activity#edu.sjsu.android.starbucks_ui.LoginActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:23:9-51
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:23:19-48
+activity#edu.sjsu.android.starbucks_ui.DashboardActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:24:9-55
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:24:19-52
+activity#edu.sjsu.android.starbucks_ui.CardActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:25:9-50
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:25:19-47
+activity#edu.sjsu.android.starbucks_ui.ManageOrderActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:26:9-57
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:26:19-54
+activity#edu.sjsu.android.starbucks_ui.TotalOrderAmountActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:27:9-62
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:27:19-59
+activity#edu.sjsu.android.starbucks_ui.RegisterActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:28:9-54
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:28:19-51
+activity#edu.sjsu.android.starbucks_ui.AddCardActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:29:9-53
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:29:19-50
+activity#edu.sjsu.android.starbucks_ui.UserProfileActivity
+ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:30:9-57
+	android:name
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml:30:19-54
+uses-sdk
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/97fef35f9cf2070df9cb844d5a4f2494/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/97fef35f9cf2070df9cb844d5a4f2494/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/poorva/.gradle/caches/transforms-2/files-2.1/a726dc647e7cdaec852f3f5b3d39aa0d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/poorva/.gradle/caches/transforms-2/files-2.1/a726dc647e7cdaec852f3f5b3d39aa0d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/934c549542a42298d2694c753e623cd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/934c549542a42298d2694c753e623cd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/88465f8868270670efbdb80f65e0ffc8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/88465f8868270670efbdb80f65e0ffc8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/ab410465a0c4c408af1adaa64c0a3964/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/ab410465a0c4c408af1adaa64c0a3964/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/714b45724b01a76c28a7afa07cb5d570/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/714b45724b01a76c28a7afa07cb5d570/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/81a6f29b38014d68cd6922dcf165d5cc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/81a6f29b38014d68cd6922dcf165d5cc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/2bb353fe23960185d920b5425570ba86/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/2bb353fe23960185d920b5425570ba86/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/9fbd942346f71461392cc654e3c39a63/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/9fbd942346f71461392cc654e3c39a63/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/0ad020e06d2f753e4302832a80054d39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/0ad020e06d2f753e4302832a80054d39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16915e95616769cd7c9d9bbfb9659845/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16915e95616769cd7c9d9bbfb9659845/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/02452014c2906714cf67065acf08d000/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/02452014c2906714cf67065acf08d000/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/4584165678f7f7d8695ec07a9c639dd3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/4584165678f7f7d8695ec07a9c639dd3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/49692a37227d1992a5d87718064f95f6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/49692a37227d1992a5d87718064f95f6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/0627fc14b0045354853d05b29758eee1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/0627fc14b0045354853d05b29758eee1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/fcd0ff72d0a760a99162b40d84e4bd0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/fcd0ff72d0a760a99162b40d84e4bd0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16448966c20f60e927ee5adb8d6d96e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/16448966c20f60e927ee5adb8d6d96e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/2dcdf32f04c014a0c0766d86a7e03780/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/2dcdf32f04c014a0c0766d86a7e03780/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/cd82e434b76e703e81765f6884741e1d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/cd82e434b76e703e81765f6884741e1d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/18e6082cb368250903878d15ae5b3d93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/18e6082cb368250903878d15ae5b3d93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/8d377f75f46fce1a03f5e2b0d9d2fdf3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/8d377f75f46fce1a03f5e2b0d9d2fdf3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/79d35aa4132e7abac27a663ff9a6cd48/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/79d35aa4132e7abac27a663ff9a6cd48/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/9dcfd1bf1c79839c7919bb933a487d24/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/9dcfd1bf1c79839c7919bb933a487d24/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/0211ded48f318ea5edb36b0ef99be5c9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/0211ded48f318ea5edb36b0ef99be5c9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/2b01dc2b8f74f890d7e0a7bce75449da/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/2b01dc2b8f74f890d7e0a7bce75449da/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/3bac1d9ea495e4f31f97e3c8df37f0c3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/poorva/.gradle/caches/transforms-2/files-2.1/3bac1d9ea495e4f31f97e3c8df37f0c3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/9a4a0355d3f0a00afc00766d64860d6f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/poorva/.gradle/caches/transforms-2/files-2.1/9a4a0355d3f0a00afc00766d64860d6f/AndroidManifest.xml:20:5-44
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+		ADDED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml
+		INJECTED from /home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/src/main/AndroidManifest.xml

@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/poorva/.gradle/caches/transforms-2/files-2.1/97fef35f9cf2070df9cb844d5a4f2494/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/poorva/.gradle/caches/transforms-2/files-2.1/fcd0ff72d0a760a99162b40d84e4bd0c/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+#Fri May 10 12:19:45 PDT 2019
+base.0=/home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

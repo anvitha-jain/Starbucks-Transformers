@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/poorva/Documents/Masters/Spring 2019/CMPE202/Amrutha/Starbucks-Transformers/Starbucks-UI/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/home/poorva/.gradle/caches/transforms-2/files-2.1/97fef35f9cf2070df9cb844d5a4f2494/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

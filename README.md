@@ -19,10 +19,15 @@ Final project for Starbucks by Team Transformers.
 
 ## Feature Set 
 
+Authentication API </br> 
+Sign Up API </br>
+Get User Details API </br>
 Add Cards API </br> 
+Reload Card API </br> 
+View Card Details API </br>
 Manage Order API </br> 
 Payment API </br> 
-Authentication API </br> 
+Transactions Summary API </br>
 User Profile API </br> 
 </br> 
 <b> Extra </b> </br> 
@@ -49,6 +54,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 * Add Card API
 * Reload Card Balance API
 * Get all cards for a user API
+* Manage Order API
 * Payment API
 * Get all transactions for a user API
 

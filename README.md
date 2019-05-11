@@ -34,7 +34,6 @@ User Profile API </br>
 </br> 
 <b> Extra </b> </br> 
 
-
 Android Mobile Application </br> 
 Automated Cloud Deployment via CI/CD pipeline which consists of Jenkins.
 

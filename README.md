@@ -116,7 +116,7 @@ Screenshot:
 
 ## Github Contributions
 
-[!amruthasingh Starbucks-Transformers.png]
+[!amruthasingh Starbucks-Transformers.png](Starbucks-Transformers/Starbucks-UI.png)
 
 **Team Members: Contributions**
 ---

@@ -8,7 +8,7 @@ CMPE 202 final project Starbucks by Team Transformers.
 * Created Android Aplication for UI which is displaying result for all API's
 
 
-## Application Demo YouTube link:
+## Android Application Demo YouTube link:
 
 
 https://youtu.be/NmqMa6MRGZc

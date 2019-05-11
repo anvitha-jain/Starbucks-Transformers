@@ -1,6 +1,6 @@
 ## Starbucks
 
-Final project for Starbucks by Team Transformers.
+CMPE 202 final project Starbucks by Team Transformers.
 
 
 * Created Spring Boot Maven Project Application for building Rest API's using MySQL and JPA

@@ -8,6 +8,12 @@ Final project for Starbucks by Team Transformers.
 * Created Android Aplication for UI which is displaying result for all API's
 
 
+## Application Demo You Tube link:
+
+
+https://youtu.be/NmqMa6MRGZc
+
+
 **CI/CD Deployment Architecture**
 ---
 
@@ -152,10 +158,7 @@ Screenshot:
 * RDS setup: Snehal Yeole
 
 
-## Application Demo You Tube link:
 
-
-https://youtu.be/NmqMa6MRGZc
 
 
 

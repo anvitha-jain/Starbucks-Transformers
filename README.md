@@ -23,6 +23,9 @@ https://youtu.be/NmqMa6MRGZc
 
 ![archi](https://user-images.githubusercontent.com/42703827/57346097-2704a580-7102-11e9-8790-38c26d079399.png)
 
+Summary:
+
+As soon as a team member pushes code to github, a build gets triggered in Jenkins which pushes the latest code on to the EC2 Autoscaling cluster.
 
 ## List of Rest APIs implemented using Spring Boot
 
@@ -39,10 +42,10 @@ Transactions Summary API </br>
 User Profile API </br> 
 
 
-<b> Extra </b> </br> 
+<b> Extra </b> 
 
 Android Mobile Application </br> 
-Automated Cloud Deployment via CI/CD pipeline which consists of Jenkins.
+Automated Cloud Deployment and CI/CD pipeline which consists of Jenkins.
 
 
 ## Design Decisions 

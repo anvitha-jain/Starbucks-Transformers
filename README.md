@@ -50,8 +50,7 @@ This project uses Model-View-Controller design. The design was made keeping in m
 **List of REST APIs**	
 ---
   	
-   
-   
+  
 * Sign up API
 * Authentication/Login API
 * Getting user profile API

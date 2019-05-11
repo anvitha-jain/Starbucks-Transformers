@@ -114,6 +114,12 @@ Screenshot:
 * Respect: Each one in the team had mutually respect for each other. Everyone were treated equal and there was a sense of responsibility in every member to complete their assigned tasks. Everyone in the team was valued.
 
 
+## Github Contributions
+
+
+<img width="941" alt="New Contributions" src="https://user-images.githubusercontent.com/44592616/57566192-94bd0580-737e-11e9-9fa7-9eb85b9bd0f8.PNG">
+
+
 **Team Members: Contributions**
 ---
 

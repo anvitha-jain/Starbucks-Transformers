@@ -70,6 +70,8 @@ This project uses Model-View-Controller design. The design was made keeping in m
 
 [Sprint Task Sheet and Burndown Chart ](https://docs.google.com/spreadsheets/d/15Wpj40Am4bEe3XgMnDBChcCjzgIvM10R8c90u-sdjQk/edit?usp=sharing)
 
+<img width="1046" alt="Burndown_Chart" src="https://user-images.githubusercontent.com/44592616/57564067-fc615980-735a-11e9-8ec7-dc3b26367f69.png">
+
 [Story Board/ Task board ](https://github.com/amruthasingh/Starbucks-Transformers/projects/1)
 
 [Project Journal ](https://github.com/amruthasingh/Starbucks-Transformers/tree/master/Sprint%20Reviews)

@@ -15,11 +15,10 @@ https://youtu.be/NmqMa6MRGZc
 
 
 **CI/CD Deployment Architecture**
----
 
 
 * Implemented Continuous Integration and Continuous Deployment of Application on EC2 instance.
-* Implemented Autoscalling of the EC2 instance.
+* Implemented Autoscaling in AWS with EC2 instances behind AWS Load Balancer.
 
 ![archi](https://user-images.githubusercontent.com/42703827/57346097-2704a580-7102-11e9-8790-38c26d079399.png)
 

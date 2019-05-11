@@ -114,10 +114,6 @@ Screenshot:
 * Respect: Each one in the team had mutually respect for each other. Everyone were treated equal and there was a sense of responsibility in every member to complete their assigned tasks. Everyone in the team was valued.
 
 
-## Github Contributions
-
- ![alt text](Starbucks-Transformers/Starbucks-UI/amruthasingh Starbucks-Transformers.png)
-
 **Team Members: Contributions**
 ---
 

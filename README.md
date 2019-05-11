@@ -63,6 +63,8 @@ This project uses Model-View-Controller design. The design was made keeping in m
 **Architecture:**
 ---
 
+
+
 ![Draft_Architecture](https://user-images.githubusercontent.com/44592616/57203492-5df18480-6f65-11e9-83c0-e96e9c6ed27f.png)
 
 

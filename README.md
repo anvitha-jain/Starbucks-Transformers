@@ -116,7 +116,7 @@ Screenshot:
 
 ## Github Contributions
 
-<img width="937" alt="Contributions" src="https://user-images.githubusercontent.com/44592616/57565801-b0251200-7378-11e9-870c-d892c91288e2.PNG">
+[!amruthasingh Starbucks-Transformers.png]
 
 **Team Members: Contributions**
 ---

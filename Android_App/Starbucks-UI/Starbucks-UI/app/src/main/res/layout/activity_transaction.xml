@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:focusable="true" >
+
+
+    <TextView
+        android:id="@+id/temp_text"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Payment Successful"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffffff"
+        android:text="Order Summary" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/generate"
+        android:onClick="open"
+        android:background="#ff0006"
+        android:textColor="#ffffff"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/output_title"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generate"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Transaction Details:"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_output"
+        android:layout_width="wrap_content"
+        android:layout_height="418dp"
+        android:layout_below="@+id/generate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="26dp"
+        android:background="#808080"
+        android:scrollbars="vertical"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".Transaction">-->
+
+<!--</android.support.constraint.ConstraintLayout>-->

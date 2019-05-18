@@ -8,6 +8,12 @@ CMPE 202 final project Starbucks by Team Transformers.
 * Created Android Aplication for UI which is displaying result for all API's
 * Setup CI/CD pipeline for automated builds and Setup EC2 Autoscaling Cluster for scalability
 
+## Team Members:
+
+1. Poorva Agarwal 013770939
+2. Snehal Yeole 012548471
+3. Amrutha Singh Balaji Singh 013778583
+4. Anvitha Shubhaveer Jain 013738478
 
 ## Android Application Demo YouTube link:
 
